@@ -1,0 +1,822 @@
+@font-face 
+    font-family: 'TildaSans'
+    src: url('./fonts/TildaSans-Regular.woff2') format('woff2')
+    font-weight: 400
+    font-style: normal
+@font-face 
+    font-family: 'TildaSans'
+    src: url('./fonts/TildaSans-Black.woff2') format('woff2')
+    font-weight: 900
+    font-style: normal
+@font-face 
+    font-family: 'TildaSans'
+    src: url('./fonts/TildaSans-Bold.woff2') format('woff2')
+    font-weight: 700
+    font-style: normal
+@font-face 
+    font-family: 'TildaSans'
+    src: url('./fonts/TildaSans-ExtraBold.woff2') format('woff2')
+    font-weight: 800
+    font-style: normal
+@font-face 
+    font-family: 'TildaSans'
+    src: url('./fonts/TildaSans-Light.woff2') format('woff2')
+    font-weight: 300
+    font-style: normal
+@font-face 
+    font-family: 'TildaSans'
+    src: url('./fonts/TildaSans-Medium.woff2') format('woff2')
+    font-weight: 500
+    font-style: normal
+@font-face 
+    font-family: 'TildaSans'
+    src: url('./fonts/TildaSans-Semibold.woff2') format('woff2')
+    font-weight: 600
+    font-style: normal
+
+$white: #fff
+$red: #D91010
+$black: #04050E
+
+*   
+    color: $black
+    padding: 0 
+    margin: 0
+    box-sizing: border-box
+    font-family: 'TildaSans'
+    font-weight: 400
+    scroll-behavior: smooth
+    scroll-margin: 100px
+body 
+    position: relative
+    background: #FBFBFB
+img 
+    width: 100%
+    height: auto
+a 
+    color: inherit 
+    text-decoration: none 
+    cursor: pointer
+span 
+    font-weight: inherit 
+    font-size: inherit
+h2
+    font-size: 85px
+    font-weight: 700
+    line-height: 85px
+    text-transform: uppercase
+h3
+    font-size: 22px
+    font-weight: 700
+h4
+    font-size: 20px 
+    font-weight: 500
+li 
+    list-style: none 
+button 
+    color: inherit
+    border: 0 
+    outline: 0 
+    background: none 
+    cursor: pointer
+
+.container
+    margin: 0 auto
+    max-width: 1172px
+    width: 100%
+    padding: 0px 15px
+.kardio
+    span 
+        &:nth-child(1)
+            font-weight: bold
+
+        &:nth-child(2)
+            font-weight: bold
+            color: $red
+        &:nth-child(3)
+            font-weight: bold
+
+        &:nth-child(4)
+            font-weight: bold
+            color: $red
+.bold
+    span
+        font-weight: bold
+section
+    margin-bottom: 100px
+header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    z-index: 2
+    background-color: $black
+    padding: 30px 40px
+footer
+    padding-bottom: 50px
+// HEADER
+
+.section
+    &__title
+         margin-bottom: 32px
+
+.header
+    &__container
+        display: flex
+        align-items: center
+        gap: 15px
+    &__logo
+        max-width: 105px
+        width: 100%
+    &__menu
+        &-list
+            li
+                position: relative
+                &::before
+                    content: ""
+                    background-color: $white
+                    width: 0px
+                    height: 1px
+                    position: absolute
+                    transition: .3s
+                    left: 0px
+                    bottom: -2px
+                &:hover 
+                    &::before 
+                        width: 100%
+            display: flex
+            align-items: center
+            gap: 30px
+        &-item
+            color: $white
+            font-size: 16px
+            font-weight: 600
+            text-transform: uppercase
+    &__button
+        display: none
+
+// MAIN
+
+.main
+    background-image: url("img/bg-main.png")
+    background-size: cover
+    background-position: center center
+    background-repeat: no-repeat
+    height: 100vh
+    &__bg
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.7) 100%)
+        width: 100%
+        height: 100%
+    .container
+        height: 100%
+    &__block
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: center
+        height: 100%
+    &__title
+        margin-bottom: 60px
+        max-width: 945px
+        color: $white
+        text-align: center
+        font-size: 72px
+        font-weight: 600
+        span
+            color: $red
+    &__descript
+        color: $white
+        font-size: 24px
+        font-weight: 300
+    
+// MONIT
+            
+.monit
+    &__info
+        gap: 20px
+        display: flex
+        justify-content: space-between
+        &-descript
+            padding-left: 40px
+            max-width: 515px
+            width: 100%
+        &-img
+            max-width: 560px
+            width: 100%
+            &-mobile
+                display: none
+    &__descript
+        &-parag
+            padding-bottom: 30px
+            font-size: 21px
+            font-weight: 400
+            line-height: 33px
+    &__link
+        font-family: Arial
+        font-size: 20px
+        font-weight: 400
+        text-transform: uppercase
+        border-bottom: 2px solid $black
+        padding: 7px 0px
+        img
+            width: 13px
+            margin-left: 16px
+    &__parag-last
+        padding-bottom: 40px
+
+// ABOUT
+
+.about       
+    &__info
+        gap: 20px
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        &-descript
+            max-width: 576px
+            width: 100%
+        &-img
+            max-width: 560px
+            width: 100%
+    &__descript
+        &-title
+            max-width: 470px
+            font-size: 22px
+            width: 100%
+            font-weight: 700
+            
+        &-parag
+            padding-top: 30px
+            font-size: 21px
+            font-weight: 300
+            line-height: 32px
+
+// USTR
+
+.ustr
+    &__img
+        &-block
+            display: flex
+            justify-content: space-between
+            margin-top: 55px
+            margin-bottom: 80px
+        &-item
+            max-width: 360px
+            width: 360px
+    &__description
+        font-size: 21px
+        font-weight: 300
+        line-height: 31px
+        margin-bottom: 30px
+        &:last-child
+            margin-bottom: 0
+        
+// HOW
+
+.how
+    &__title
+        margin-bottom: 65px
+    &__description
+        margin-bottom: 30px
+        font-size: 22px
+        font-weight: 300
+        line-height: 33px
+        &:last-child
+            margin-bottom: 46px
+    &__block
+        &-title
+            margin-bottom: 10px
+            line-height: 33px
+    &__item
+        display: flex
+        align-items: center
+        gap: 20px
+        margin-bottom: 25px
+        &:last-child
+            margin-bottom: 0px
+        &-img
+            min-width: 35px
+            width: 35px
+            
+// TABLE
+
+.table
+    &__main
+        border-spacing: 0px
+        width: 904px
+        tr
+            &:first-child
+                th
+                    font-size: 20px
+                    font-weight: 700
+            td
+                max-width: 153px
+                width: 153px
+                border: 1px solid rgb(238, 238, 238)
+                img
+                    width: 40px
+                    margin: 0 auto
+                    display: block
+            
+                &:first-child
+                    font-size: 20px
+                    font-weight: 300
+                    border-left: 0px
+                    max-width: 292px
+                    width: 292px
+                    padding: 12px 0px
+        th
+            vertical-align: baseline
+            &:first-child
+                text-align: left
+            
+// REJ
+
+.rej
+    &__block
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        gap: 36px
+    &__img
+        max-width: 560px
+        width: 100%
+    &__info
+        max-width: 560px
+        width: 100%
+        &-title
+            font-size: 31px
+            font-weight: 600
+    &__descript
+        margin-top: 30px
+        font-weight: 300
+        font-size: 22px
+        line-height: 33px
+            
+// UROV
+
+.urov
+    &__title
+        text-align: center
+        font-size: 42px
+        font-weight: 600
+        margin-bottom: 47px
+        text-transform: none
+        line-height: 52px
+        &-descript
+            max-width: 827px
+            font-size: 24px
+            font-weight: 300
+            line-height: 36px
+            text-align: center
+            margin: 0 auto
+    &__block
+        margin-top: 100px
+        display: flex
+        flex-wrap: wrap
+        gap: 50px 30px
+    &__item
+        gap: 20px
+        display: flex
+        align-items: flex-start
+        &-icon
+            width: 45px
+            min-width: 45px
+        &-info
+            max-width: 456px
+            width: 100%
+        &-title
+            font-size: 18px
+            font-weight: 700
+            margin-bottom: 13px
+        &-descrpt
+            font-size: 16px
+            font-weight: 300
+            line-height: 25px
+                        
+//  II
+
+.ii
+    &__title
+        margin-bottom: 87px
+    &__info
+        gap: 20px
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        &-descript
+            max-width: 576px
+            width: 100%
+        &-img
+            max-width: 560px
+            width: 100%
+    &__descript
+        &-title
+            max-width: 470px
+            width: 100%
+            font-size: 31px
+            font-weight: 600
+        &-parag
+            padding-top: 30px
+            font-size: 21px
+            font-weight: 300
+            line-height: 32px
+        &-item
+            font-size: 18px
+            font-weight: 500
+            
+    &__item
+        border-top: 1px solid rgb(23, 22, 28)
+        &-title
+            font-size: 24px
+            font-weight: 600
+        &:last-child
+            border-bottom: 1px solid rgb(23, 22, 28)
+        &-button 
+            background: 0 none
+            width: 22px
+            height: 22px
+            padding: 2px
+            border-radius: 100%
+            transition: .3s
+            &-active 
+                transform: rotate(45deg)
+                &:hover
+                    background: $red
+        &-header
+            padding: 26px 0px
+        &-main 
+            max-height: 0px 
+            overflow: hidden
+            opacity: 0
+            transition: .3s
+            &-active 
+                max-height: 5000px
+                overflow: visible
+                opacity: 1
+                padding-bottom: 26px
+        &-header
+            display: flex
+            align-items: center
+            justify-content: space-between
+    &__main-descript-bottom
+        padding-bottom: 28px
+    &__descript
+        &-list
+            padding-left: 20px
+            li
+                font-size: 18px
+                font-weight: 300
+                list-style-type: disc
+                margin-top: 5px
+.container
+    .ii__info
+        margin-bottom: 135px
+        &:last-child
+            margin-bottom: 0px
+
+// ISSL
+
+.issl
+    &__title
+        margin-bottom: 87px
+    &__info
+        gap: 20px
+        display: flex
+        align-items: flex-start
+        justify-content: space-between
+        margin-bottom: 80px
+        &-descript
+            max-width: 576px
+            width: 100%
+        &-img
+            max-width: 560px
+            width: 100%
+    &__descript
+        &-title
+            font-size: 42px
+            font-weight: 600
+            line-height: 52px
+        &-parag
+            padding-top: 30px
+            font-size: 21px
+            font-weight: 300
+            line-height: 32px
+        &-item
+            font-size: 18px
+            font-weight: 500 
+    &__line
+        background: $black
+        height: 3px
+        width: 50px
+        margin-top: 30px
+        
+    &__problems
+        display: flex
+        justify-content: space-between
+        align-items: flex-start
+        gap: 20px
+        &-title
+            font-size: 48px
+            font-weight: 600
+            margin-bottom: 30px
+        &-block
+            max-width: 576px
+            width: 100%
+        &-item
+            margin-bottom: 30px
+            font-size: 22px
+            font-weight: 300
+            line-height: 33px
+
+// CALLUS
+
+.callus 
+    &__descript
+        margin-top: 30px
+        font-size: 21px
+        font-weight: 400
+        color: #6C7177
+    &__form
+        max-width: 460px
+        width: 100%
+        margin-top: 40px
+        display: flex
+        flex-direction: column
+        gap: 20px
+        input, textarea
+            padding: 16px 21px
+            border: 2px solid rgb(184, 184, 184)
+            outline: 0 none
+            background: rgb(251, 251, 251)
+            font-size: 16px
+        textarea
+            resize: vertical
+            max-height: 200px
+            min-height: 85px
+        &-button
+            display: flex
+            align-items: center
+            justify-content: space-between
+            font-size: 20px
+            font-weight: 400
+            line-height: 31px
+            color: $black
+            max-width: 260px
+            width: 100%
+            text-transform: uppercase
+            border-bottom: 2px solid $black
+            padding-bottom: 9px 
+            img
+                width: 13px
+                min-width: 13px
+
+// FOOTER
+
+.footer
+    &__block
+        display: flex
+        justify-content: flex-start
+        max-width: 697px
+        width: 100%
+        gap: 136px
+    &__content    
+        &-logo
+            max-width: 164px
+            width: 100%
+            margin-bottom: 36px
+        &-seti
+            display: flex
+            align-items: center
+            justify-content: space-between
+            max-width: 58px
+            gap: 8px
+            margin-bottom: 25px
+        &__seti
+            &-item 
+                min-width: 25px
+                width: 25px
+        &-prava
+            font-size: 12px
+            font-weight: 300
+            line-height: 19px
+        &-subtitle
+            text-transform: uppercase
+            font-size: 16px
+            font-weight: 600
+            margin-bottom: 16px
+        
+        &-menu
+            display: flex
+            flex-direction: column
+            gap: 10px
+
+@media screen and (max-width: 1100px)
+    *
+        scroll-margin: 80px
+    .header
+        &__container
+            justify-content: space-between
+        &__menu
+            position: fixed
+            left: 0
+            top: -110%
+            transition: .5s
+            padding-bottom: 65px
+            background: $black
+            width: 100%
+            &-active
+                top: 72px
+            &-list
+                flex-direction: column
+        &__button
+            display: block    
+    .main
+        &__title
+            font-size: 9vw
+    .section
+        &__title
+            font-size: 7vw
+            line-height: normal
+    .urov
+        &__block
+            align-items: center
+            justify-content: center
+
+@media screen and (max-width: 900px)
+    .monit
+        &__info
+            display: block
+            max-width: none
+            &-descript
+                max-width: none
+                width: 100%
+                padding-left: 0px
+            &-img
+                display: none
+                &-mobile
+                    display: block
+    .about
+        &__info
+            display: block
+            &-img
+                max-width: none
+            &-descript
+                max-width: none
+                width: 100%
+    
+    .table
+        &__wrap
+            overflow-x: auto
+    .rej
+        &__info
+            max-width: none
+        &__block
+            display: block
+        &__img
+            max-width: none
+        &__descript
+            max-width: none
+    .urov
+        &__block
+            justify-content: left
+        &__item
+            &-info
+                max-width: none
+
+    .ii
+        &__info
+            display: block
+            &-img
+                max-width: none
+            &-descript
+                max-width: none
+        &__descript
+            &-title
+                max-width: none
+    .issl
+        &__info
+            display: block
+            &-img
+                max-width: none
+            &-descript
+                max-width: none
+        &__descript
+            &-title
+                max-width: none
+        &__problems
+            display: block
+            &-block
+                max-width: none
+
+@media screen and (max-width: 650px)
+    header
+        padding: 22px 20px
+    .section__title 
+        margin-bottom: 20px
+        font-size: 36px
+    .header
+        &__container
+            justify-content: flex-end
+        &__logo
+            display: none
+    .main
+        &__title
+            margin-bottom: 40px
+        &__descript
+            text-align: center
+            max-width: 90%
+            font-size: 14px
+    .monit
+        &__descript
+            &-parag
+                text-align: justify
+        &__link
+                max-width: 260px
+                width: 100%
+                font-size: 16px
+                justify-content: space-between
+                margin: 0 auto
+                display: flex
+    .about
+        &__descript
+            &-parag
+                text-align: justify
+    .ustr
+        &__description
+            text-align: justify
+        &__img
+            &-block
+                display: flex
+                flex-direction: column
+                margin: 0 auto
+                gap: 20px
+                align-items: center
+                margin-bottom: 20px
+            &-item
+                width: 100%
+    .how
+        &__description  
+            text-align: justify
+    .rej
+        &__descript
+            text-align: justify
+        &__img
+            margin-bottom: 20px
+    .how
+        &__item
+            &-subtitle
+                font-size: 14px
+    .urov
+        &__title
+            font-size: 30px
+            margin-bottom: 20px  
+            &-descript
+                font-size: 20px
+                line-height: 28px
+        &__block
+            margin-top: 40px          
+    .ii
+        &__descript
+            &-title
+                font-size: 30px
+            &-parag
+                text-align: justify
+                padding-top: 20px
+                &:last-child
+                    margin-bottom: 15px
+    .container
+        .ii__info
+            margin-bottom: 70px
+    .issl
+        &__info
+            margin-top: 70px
+        &__descript
+            &-parag
+                text-align: justify
+            &-title
+                font-size: 30px
+                line-height: 36px
+        &__problems
+            &-title
+                font-size: 30px
+                line-height: 36px
+                margin-bottom: 20px
+            &-item
+                text-align: justify
+    .callus
+        &__form
+            max-width: 100%
+            margin-top: 20px
+    .footer
+        &__block
+            flex-direction: column
+            gap: 40px
+        &__content
+            &-logo
+                max-width: 164px
+                img
+                    width: 164px
+    
+
+        

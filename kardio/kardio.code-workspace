@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+			"path": "../dinamika"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "kardio"
+	}
+}
