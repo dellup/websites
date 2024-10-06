@@ -122,3 +122,8 @@ $('.header__burg').click((e) => {
     let content = button.siblings('.header__menu')
     content.toggleClass('header__menu-active')
 })
+$(document).ready(function() {
+    $('.header__menu-item').on('click', function() {
+        $('.header__menu-active').removeClass('header__menu-active');
+    });
+});

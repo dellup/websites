@@ -45,33 +45,6 @@ section
     width: 100%
     padding: 0px 15px
 
-// header
-//     display: none
-// .main
-//     display: none
-// // СДЕЛАТЬ СЕРВИСЕС
-// .services
-//     display: none
-// .video
-//     display: none
-// .raboti
-//     display: none
-// .preim
-//     display: none
-// .about
-//     display: none
-// .zapis
-//     display: none
-// .sertif
-//     display: none
-// .otzivi
-//     display: none
-// .contacts
-//     display: none
-// // footer
-// //     display: none
-// // HEADER
-
 header
     position: fixed
     background: $white
@@ -99,6 +72,11 @@ header
         min-width: 65px
         width: 65px
     &__info
+        &-ter
+            display: block
+        &-ort
+            span
+                display: none
         &-title
             font-size: 18px
             font-weight: 600
@@ -363,9 +341,13 @@ main
             max-width: 522px
             margin-bottom: 18px
         &-price
-            font-size: 20px
+            font-size: 24px
             font-weight: 600
             color: $blue
+            span
+                font-size: 28px
+                font-weight: 600
+                color: $blue
         &-bg
             display: flex !important
             border-radius: 15px
@@ -392,8 +374,6 @@ main
             z-index: 2
             position: relative
             padding: 44px 0px 206px 42px 
-    .slick-list 
-        margin: 0px -10px
         
     .slick-dots
         position: absolute
@@ -473,9 +453,11 @@ main
         width: 100%
         display: inline-table
         border-radius: 5px
-        font-size: 15px
-        font-weight: 600
-        color: $white
+        
+        p
+            font-size: 15px
+            font-weight: 600
+            color: $white
         &-link
              display: inline-flex
         &::before
@@ -503,6 +485,14 @@ main
         margin: 0px 12px
         align-items: center
         border-radius: 15px
+        max-width: 609px
+        width: 100%
+        &-item
+            max-width: 609px
+            img
+                width: 100%
+                height: 387px
+                object-fit: cover
     
     .slick-arrow
         position: absolute
@@ -970,12 +960,10 @@ footer
             display: flex
             flex-direction: column
         &__soz
-            margin: 30px auto
-            align-items: flex-start
-            justify-content: center
-            margin-left: auto
-            margin-right: auto
+            margin-top: 10px
 @media screen and (max-width: 900px)
+    *
+        scroll-margin: 130px
     .main__info
         &-descript
             padding-top: 10px
@@ -1000,7 +988,17 @@ footer
         &__block
             align-items: baseline
         &__button
-            margin-left: 25px
+            p
+                font-size: 1.6vw
+            &-btn
+                position: relative
+            &-link
+                 position: absolute
+                 top: -80px
+                 left: 50%
+                 transform: translate(-50%, 0)
+        &__descript-last
+            margin-bottom: 110px
     .zapis
         &__title
             text-align: center
@@ -1019,14 +1017,59 @@ footer
             flex-direction: column
             justify-content: center
             align-items: center
+            gap: 13px
         &__location
             &-up
                 margin-left: 88px
 
+    .footer
+        &__menu
+            display: flex
+            gap: 20px
+
+
+
 @media screen and (max-width: 650px)
+    *
+        scroll-margin: 110px
+    header
+        padding: 12px 0px
+    .header
+        &__info
+            &-ter
+                display: none
+            &-ort
+                span
+                    display: inline
+                    color: $gray
+                    font-weight: 600
+                    font-size: 14px
+        &__menu
+            &-active
+                top: 100px
+    .main
+        &__info
+            padding-top: 50px
+            &-title
+                line-height: 30px
+            &-button
+                padding: 25px 54px
     .about
+        &__info
+            position: relative
         &__descript
             text-align: justify
+            position: relative
+        &__button
+            padding: 31px 25px
+            p
+                font-size: 2.6vw
+                width: 100%
+                max-width: 180px
+            &::before
+                left: -41px
+                
+        
     
     .otzivi
         &__up
@@ -1045,11 +1088,19 @@ footer
         &__soz
             align-items: center
             justify-content: center
+        .container
+            margin-bottom: 15px
     .services
         &__slider
+            &-info
+                padding: 44px 0px 70px 0px
             &-title
                 font-size: 6vw
                 max-width: 50%
             &-descript
                 font-size: 4vw
                 max-width: 50%
+            &-price
+                font-size: 16px
+                span
+                    font-size: 20px
