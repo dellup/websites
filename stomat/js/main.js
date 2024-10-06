@@ -60,10 +60,24 @@ $(function(){
 
 $('.raboti__slider').slick({
     infinite: true,
-    slidesToShow: 1,
+    slidesToShow: 2,
     slidesToScroll: 1,
     arrows: true,
+    swipe: false,
     draggable: false,
+    responsive: [{
+ 
+        breakpoint: 900,
+        settings: {
+          swipe: false,
+          slidesToShow: 1,
+          infinite: true,
+          arrows: true,
+          draggable: false,
+          slidesToScroll: 1,
+        }
+   
+      }]
 });
 $('.sertif__slider').slick({
     infinite: true,
@@ -71,6 +85,20 @@ $('.sertif__slider').slick({
     slidesToScroll: 1,
     arrows: true,
     draggable: true,
+    responsive: [{
+        breakpoint: 1200,
+        settings: {
+            slidesToShow: 3,
+        }}, {
+        breakpoint: 900,
+        settings: {
+            slidesToShow: 2,
+        }}, {
+        breakpoint: 650,
+        settings: {
+            slidesToShow: 1,
+        }
+    }]
 });
 $('.otzivi__slider').slick({
     infinite: true,
@@ -78,6 +106,16 @@ $('.otzivi__slider').slick({
     slidesToScroll: 1,
     arrows: true,
     draggable: true,
+    responsive: [{
+        breakpoint: 1100,
+        settings: {
+            slidesToShow: 2,
+        }}, {
+        breakpoint: 650,
+        settings: {
+            slidesToShow: 1,
+        }
+    }]
 });
 $('.header__burg').click((e) => {
     let button = $(e.currentTarget)
