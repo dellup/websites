@@ -3,6 +3,7 @@ $('.main__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
+    fade: true,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000
@@ -12,6 +13,7 @@ $('.services__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     dots: true,
+    fade: true,
     arrows: false,
     autoplay: true,
     autoplaySpeed: 3000
@@ -77,3 +79,8 @@ $('.otzivi__slider').slick({
     arrows: true,
     draggable: true,
 });
+$('.header__burg').click((e) => {
+    let button = $(e.currentTarget)
+    let content = button.siblings('.header__menu')
+    content.toggleClass('header__menu-active')
+})

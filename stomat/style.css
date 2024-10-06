@@ -6,6 +6,7 @@
           box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Gilroy";
+  scroll-margin: 140px;
 }
 
 body {
@@ -54,6 +55,50 @@ section {
   padding: 0px 15px;
 }
 
+.main {
+  display: none;
+}
+
+.services {
+  display: none;
+}
+
+.video {
+  display: none;
+}
+
+.raboti {
+  display: none;
+}
+
+.preim {
+  display: none;
+}
+
+.about {
+  display: none;
+}
+
+.zapis {
+  display: none;
+}
+
+.sertif {
+  display: none;
+}
+
+.otzivi {
+  display: none;
+}
+
+.contacts {
+  display: none;
+}
+
+footer {
+  display: none;
+}
+
 header {
   position: fixed;
   background: #FFF;
@@ -66,6 +111,10 @@ header {
   z-index: 2;
 }
 
+.header__burg {
+  width: 40px;
+  display: none;
+}
 .header__block {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -214,8 +263,28 @@ main {
   padding-top: 130px;
 }
 
+.container {
+  height: 100%;
+}
+
 .main {
+  height: calc(100vh - 129px);
   position: relative;
+}
+.main .slick-slider {
+  height: 100%;
+}
+.main .slick-track {
+  height: 100%;
+}
+.main__slider {
+  height: 100%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 .main::before {
   width: 100%;
@@ -240,6 +309,7 @@ main {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 20px;
 }
 .main__info {
   padding-top: 73px;
@@ -278,7 +348,7 @@ main {
   display: inline-flex;
 }
 .main__img {
-  max-width: 569px;
+  max-width: 750px;
   width: 100%;
 }
 .main .slick-list {
@@ -341,8 +411,32 @@ main {
   border-radius: 15px;
   width: 100%;
   position: relative;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(27.95%, rgba(255, 255, 255, 0)), color-stop(91.99%, #FFF));
   background: linear-gradient(180deg, rgba(255, 255, 255, 0) 27.95%, #FFF 91.99%);
+}
+.services__card-bg:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(55.14%, rgba(255, 255, 255, 0)), color-stop(91.99%, #0091FF));
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 55.14%, #0091FF 91.99%);
+}
+.services__card-bg:hover::after {
+  content: "";
+  position: absolute;
+  background-image: url("img/white-icon.svg");
+  width: 23px;
+  height: 35px;
+  z-index: 2;
+  bottom: 0;
+  right: 23px;
+}
+.services__card-bg:hover .services__card-descript {
+  display: block;
+}
+.services__card-bg:hover .services__card-title {
+  color: #FFF;
 }
 .services__card-item {
   position: relative;
@@ -371,6 +465,17 @@ main {
   bottom: 16px;
   left: 26px;
   font-size: 20px;
+  font-weight: 600;
+  z-index: 2;
+}
+.services__card-descript {
+  line-height: 25px;
+  display: none;
+  position: absolute;
+  bottom: 56px;
+  left: 26px;
+  font-size: 16px;
+  color: #FFF;
   font-weight: 600;
   z-index: 2;
 }
@@ -1089,4 +1194,40 @@ footer {
 .footer__soz-item img {
   min-width: 20px;
   width: 20px;
+}
+
+@media screen and (max-width: 1100px) {
+  .header__right {
+    display: none;
+  }
+  .header__burg {
+    display: block;
+  }
+  .header__menu {
+    position: fixed;
+    left: 0;
+    top: -110%;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    padding-bottom: 65px;
+    background: #FFF;
+    -webkit-box-shadow: 0px 150px 42px 0px rgba(199, 199, 199, 0), 0px 96px 38px 0px rgba(199, 199, 199, 0.01), 0px 54px 32px 0px rgba(199, 199, 199, 0.05), 0px 24px 24px 0px rgba(199, 199, 199, 0.09), 0px 6px 13px 0px rgba(199, 199, 199, 0.1);
+            box-shadow: 0px 150px 42px 0px rgba(199, 199, 199, 0), 0px 96px 38px 0px rgba(199, 199, 199, 0.01), 0px 54px 32px 0px rgba(199, 199, 199, 0.05), 0px 24px 24px 0px rgba(199, 199, 199, 0.09), 0px 6px 13px 0px rgba(199, 199, 199, 0.1);
+    width: 100%;
+  }
+  .header__menu-item-submenu:hover > #linkAbout {
+    display: none;
+  }
+  .header__menu-active {
+    top: 112px;
+  }
+  .header__menu-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .header__button {
+    display: block;
+  }
 }

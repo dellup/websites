@@ -32,8 +32,8 @@
                                 <li class="header__submenu-item"><a href="#">Страница 3</a></li>
                             </ul>
                         </li>
-                        <li class="header__menu-item"><a href="#">О враче</a></li>
-                        <li class="header__menu-item"><a href="#">Контакты</a></li>
+                        <li class="header__menu-item header__menu"><a href="#about">О враче</a></li>
+                        <li class="header__menu-item"><a href="#contacts">Контакты</a></li>
                     </ul>
                 </nav>
                 <div class="header__right">
@@ -49,7 +49,8 @@
                         </div>
                         <a href="#" class="header__call-button"><div class="header__call-link">Запись на прием</div></a>
                     </div>
-                </div>    
+                </div>
+                <button class="header__burg"><img src="img/burger-menu.svg" alt="BurgerImg"></button>    
             </div>
         </div>
     </header>
@@ -90,14 +91,17 @@
                 <div class="services__card">
                     <div class="services__card-bg">
                         <div class="services__card-item services__card-ordont"></div>
+                        <p class="services__card-descript">Брекеты &#8226; Элайнеры &#8226; Сопутствующие услуги &#8226; Устранение аномалий прикуса</p>
                         <h3 class="services__card-title">Ордонтия</h3>
                     </div>
                     <div class="services__card-bg">
                         <div class="services__card-item services__card-child"></div>
+                        <p class="services__card-descript">Чистка зубов &#8226; Ремонт зубов &#8226; Герметизация &#8226; Седация и анестезия</p>
                         <h3 class="services__card-title">Детская стоматология</h3>
                     </div>
                     <div class="services__card-bg">
                         <div class="services__card-item services__card-therapy"></div>
+                        <p class="services__card-descript">Консультация ортодонта &#8226; Брекеты &#8226; <br>Лингвальные брекеты &#8226; Невидимые капы &#8226; Устранение аномалий прикуса</p>
                         <h3 class="services__card-title">Терапия</h3>
                     </div>
                 </div>
@@ -126,7 +130,7 @@
                 <p class="video__descript">Видео-обзор нашей клиники</p>
             </div>
         </section>
-        <section class="about">
+        <section class="about" id="about">
             <div class="container">
                 <div class="about__block">
                     <div class="about__info">
@@ -311,7 +315,7 @@
                 </div>
             </div>
         </section>
-        <section class="contacts">
+        <section class="contacts" id="contacts">
             <div class="container">
                 <div class="contacts__block">
                     <h2 class="contacts__title">Контакты</h2>
@@ -387,7 +391,6 @@
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/beforeafter.jquery-1.0.0.min.js"></script>
-    <script src="js/beforeafter.jquery-1.0.0.js"></script>
     
     <script src="js/main.js"></script>
 

@@ -11,6 +11,7 @@ $white-dark: #F3F5F8
     box-sizing: border-box
     scroll-behavior: smooth
     font-family: 'Gilroy'
+    scroll-margin: 140px
 body 
     position: relative
     background: $white
@@ -44,6 +45,30 @@ section
     width: 100%
     padding: 0px 15px
 
+// header
+//     display: none
+.main
+    display: none
+.services
+    display: none
+.video
+    display: none
+.raboti
+    display: none
+.preim
+    display: none
+.about
+    display: none
+.zapis
+    display: none
+.sertif
+    display: none
+.otzivi
+    display: none
+.contacts
+    display: none
+footer
+    display: none
 // HEADER
 
 header
@@ -57,6 +82,9 @@ header
     z-index: 2
 
 .header
+    &__burg
+        width: 40px
+        display: none
     &__block
         display: flex
         align-items: center
@@ -156,8 +184,19 @@ header
 // MAIN
 main
     padding-top: 130px
+.container
+    height: 100%
 .main
+    height: calc(100vh - 129px)
     position: relative 
+    .slick-slider
+        height: 100%
+    .slick-track
+        height: 100%
+    &__slider
+        height: 100%
+        justify-content: center
+        display: flex
     &::before
         width: 100%
         background: url("img/main-bg.png")
@@ -176,6 +215,7 @@ main
     &__block
         display: flex
         justify-content: space-between
+        gap: 20px
     &__info
         padding-top: 73px
         max-width: 537px
@@ -206,7 +246,7 @@ main
     &__button-link
         display: inline-flex
     &__img
-        max-width: 569px
+        max-width: 750px
         width: 100%
     .slick-list 
         margin: 0px -10px
@@ -253,7 +293,26 @@ main
             border-radius: 15px
             width: 100%
             position: relative
+            transition: .3s
             background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 27.95%, #FFF 91.99%)
+            &:hover
+                transition: .3s
+                background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 55.14%, #0091FF 91.99%)
+                &::after
+                    content: ""
+                    position: absolute
+                    background-image: url("img/white-icon.svg")
+                    width: 23px
+                    height: 35px
+                    z-index: 2
+                    bottom: 0
+                    right: 23px
+                .services__card
+                    &-descript
+                        display: block
+                    &-title
+                        color: $white 
+
         &-item
             position: relative
             z-index: -1
@@ -278,6 +337,16 @@ main
             bottom: 16px
             left: 26px
             font-size: 20px
+            font-weight: 600
+            z-index: 2
+        &-descript
+            line-height: 25px
+            display: none
+            position: absolute
+            bottom: 56px
+            left: 26px
+            font-size: 16px
+            color: $white
             font-weight: 600
             z-index: 2
     &__slider
@@ -814,3 +883,30 @@ footer
             img
                 min-width: 20px
                 width: 20px
+
+
+@media screen and (max-width: 1100px)
+    .header
+        &__right
+            display: none
+        &__burg
+            display: block
+        &__menu
+            position: fixed
+            left: 0
+            top: -110%
+            transition: .5s
+            padding-bottom: 65px
+            background: $white
+            box-shadow: 0px 150px 42px 0px rgba(199, 199, 199, 0.00), 0px 96px 38px 0px rgba(199, 199, 199, 0.01), 0px 54px 32px 0px rgba(199, 199, 199, 0.05), 0px 24px 24px 0px rgba(199, 199, 199, 0.09), 0px 6px 13px 0px rgba(199, 199, 199, 0.10)
+            width: 100%
+            &-item
+                &-submenu
+                    &:hover > #linkAbout
+                        display: none
+            &-active
+                top: 112px
+            &-list
+                flex-direction: column
+        &__button
+            display: block
