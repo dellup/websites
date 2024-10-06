@@ -1193,12 +1193,10 @@ footer {
   }
   .main__info {
     margin: 0 auto;
+    max-width: 70%;
   }
   .main__img {
     margin: 0 auto;
-  }
-  .main__info-title {
-    font-size: 9vw;
   }
   .video__descript {
     margin-left: auto;
@@ -1276,6 +1274,12 @@ footer {
   }
 }
 @media screen and (max-width: 900px) {
+  .main__info-descript {
+    padding-top: 10px;
+  }
+  .main__info-title {
+    font-size: 7vw;
+  }
   .services__card {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -1289,6 +1293,8 @@ footer {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    width: 100%;
+    max-width: 416px;
   }
   .services__card-title {
     margin-left: auto;

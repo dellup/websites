@@ -919,11 +919,11 @@ footer
             gap: 30px
         &__info
             margin: 0 auto
+            max-width: 70%
+
         &__img
             margin: 0 auto
-        &__info
-            &-title
-                font-size: 9vw
+        
             
     
     .video
@@ -976,12 +976,19 @@ footer
             margin-left: auto
             margin-right: auto
 @media screen and (max-width: 900px)
+    .main__info
+        &-descript
+            padding-top: 10px
+        &-title
+            font-size: 7vw
     .services
         &__card
             flex-direction: column
             &-bg
                 display: flex
                 justify-content: center
+                width: 100%
+                max-width: 416px
                 
             &-title
                 margin-left: auto
