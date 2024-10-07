@@ -43,7 +43,7 @@ section
     margin: 0 auto
     max-width: 1296px
     width: 100%
-    padding: 0px 15px
+    padding: 0px 20px
 
 header
     position: fixed
@@ -359,7 +359,6 @@ main
             background-size: cover
             background-position: center center
             background-repeat: no-repeat
-            background-image: url("img/services-bg.jpg")
             &::before
                 position: absolute
                 width: 100%
@@ -373,6 +372,15 @@ main
                 background-size: cover
                 background-position: center center
                 background: linear-gradient(-90deg, rgba(255, 255, 255, 0.00) 32.57%, #FFF 81.8%)
+            &-first
+                background-image: url("img/services-bg.jpg")
+            &-second
+                background-image: url("img/pishet.jpg")
+                .services__slider
+                    &-info
+                        padding: 44px 0px 230px 42px
+                    &-title
+                        max-width: 545px
         &-info
             z-index: 2
             position: relative
@@ -430,6 +438,25 @@ main
     &__info
         max-width: 724px
         width: 100%
+    &__link
+        position: relative
+    &__button
+        max-width: 300px
+        font-size: 15px
+        padding: 31px 55px
+        &::before
+                content: ""
+                background-image: url("img/notebook.svg")
+                position: absolute
+                top: -15px
+                left: -33px
+                width: 59.39px
+                height: 80.946px
+                flex-shrink: 0
+                background-size: cover
+                z-index: 1
+    &-button
+        display: inline-flex
     &__block
         display: flex
         align-items: center
@@ -448,32 +475,7 @@ main
         span
             font-weight: 600
             color: $gray
-    &__button
-        position: relative
-        padding: 31px 49px
-        background-color: $blue
-        max-width: 252px
-        width: 100%
-        display: inline-table
-        border-radius: 5px
-        
-        p
-            font-size: 15px
-            font-weight: 600
-            color: $white
-        &-link
-             display: inline-flex
-        &::before
-            content: ""
-            background-image: url("img/notebook.svg")
-            position: absolute
-            top: -15px
-            left: -33px
-            width: 59.39px
-            height: 80.946px
-            flex-shrink: 0
-            background-size: cover
-            z-index: 1
+    
 
                 
 // RABOTI
@@ -882,6 +884,13 @@ footer
 
 
 @media screen and (max-width: 1200px)
+    
+    header
+        padding: 12px 0px
+    main
+        padding-top: 100px
+    .main
+        height: calc(100vh - 100px)
     .header
         &__right
             display: none
@@ -975,11 +984,19 @@ footer
 @media screen and (max-width: 900px)
     *
         scroll-margin: 130px
-    .main__info
-        &-descript
-            padding-top: 10px
-        &-title
-            font-size: 7vw
+    
+    .main
+        &__info
+            max-width: 89%
+            padding-top: 30px
+            &-descript
+                padding-top: 10px
+            &-title
+                font-size: 7vw
+        &__img
+            img
+                margin-top: 0
+                margin-left: 0
     .services
         &__card
             flex-direction: column
@@ -990,11 +1007,7 @@ footer
                 max-width: 416px
                 
             &-title
-                margin-left: auto
-                margin-right: auto
-                left: 0
-                right: 0
-                text-align: center
+                left: 22px
     .about
         &__block
             align-items: baseline
@@ -1009,7 +1022,7 @@ footer
                  left: 50%
                  transform: translate(-50%, 0)
         &__descript-last
-            margin-bottom: 110px
+            margin-bottom: 30px
     .zapis
         &__title
             text-align: center
@@ -1043,8 +1056,6 @@ footer
 @media screen and (max-width: 650px)
     *
         scroll-margin: 110px
-    header
-        padding: 12px 0px
     .header
         &__info
             &-ter
@@ -1062,36 +1073,48 @@ footer
         &__button-link
             display: block
             margin: 0 auto
+        &__img
+            img
+                margin-left: 0px
+                margin-top: 0px
         &__info
-            padding-top: 30px
+            padding-top: 22px
             max-width: none
             &-title
-                line-height: 30px
-                text-align: center
+                line-height: normal
             &-button
                 padding: 25px 35px
-                text-align: center
                 display: block
                 margin: 0 auto
-                max-width: 220px
-            &-descript
+                max-width: none
                 text-align: center
+            
     .about
+        &__button-link
+            display: block
+            margin: 0 auto
+        
+        &__info
+            &-button
+                padding: 25px 35px
+                display: block
+                margin: 0 auto
+                max-width: none
+                text-align: center
         &__info
             position: relative
         &__descript
             text-align: justify
             position: relative
         &__button
-            padding: 31px 25px
+            padding: 22px 25px
             p
                 font-size: 2.6vw
                 width: 100%
                 max-width: 180px
             &::before
-                left: -41px
-                
-        
+                left: -16px
+                   
     
     .otzivi
         &__up
@@ -1115,14 +1138,18 @@ footer
     .services
         &__slider
             &-info
-                padding: 44px 0px 70px 0px
+                padding: 31px 0px 168px 24px !important
             &-title
                 font-size: 6vw
-                max-width: 50%
+                max-width: 80%
             &-descript
                 font-size: 4vw
-                max-width: 50%
+                max-width: 80%
             &-price
-                font-size: 16px
+                font-size: 24px
                 span
-                    font-size: 20px
+                    font-size: 28px
+            &-bg
+                &-second
+                    .services__slider-info
+                        padding: 31px 0px 162px 24px !important
