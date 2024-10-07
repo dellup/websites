@@ -1402,13 +1402,19 @@ footer {
     top: 100px;
   }
   .main__info {
-    padding-top: 50px;
+    padding-top: 30px;
+    max-width: none;
   }
   .main__info-title {
     line-height: 30px;
+    text-align: center;
   }
   .main__info-button {
     padding: 25px 54px;
+    text-align: center;
+  }
+  .main__info-descript {
+    text-align: center;
   }
   .about__info {
     position: relative;
