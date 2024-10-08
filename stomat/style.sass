@@ -882,7 +882,81 @@ footer
                 min-width: 20px
                 width: 20px
 
-
+.modal
+    &__bg
+        position: fixed
+        top: 0
+        left: 0
+        z-index: 5
+        width: 100%
+        height: 100dvh
+        background: rgba(0, 0, 0, 0.4)
+        display: none
+        align-items: center
+        justify-content: center
+        opacity: 0
+        transition: .3s
+        &-active 
+            opacity: 1
+    &__window
+        position: relative
+        box-shadow: 0px 233px 65px 0px rgba(161, 161, 161, 0.00), 0px 149px 60px 0px rgba(161, 161, 161, 0.01), 0px 84px 50px 0px rgba(161, 161, 161, 0.05), 0px 37px 37px 0px rgba(161, 161, 161, 0.09), 0px 9px 20px 0px rgba(161, 161, 161, 0.10)
+        border-radius: 10px
+        max-width: 671px
+        width: 100%
+        background: #fff
+        height: 463px
+        display: none 
+        opacity: 0
+        transition: .3s
+        &-active 
+            opacity: 1
+    &__close
+        position: absolute
+        right: 23px
+        top: 19px
+        width: 16px
+        z-index: 1
+        height: 16px
+        img
+    &__zapis
+        &-title
+            font-size: 35px
+            font-weight: 700
+        &-bg
+            border-radius: 15px
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            padding: 24px 0px 23px 0px
+            position: relative
+            &::before
+                content: ""
+                background-image: url("img/lines.svg")
+                position: absolute
+                top: 0
+                left: 18px
+                width: 23px
+                z-index: 1
+                height: 53px
+        &-form
+            flex-direction: column
+            display: flex
+            gap: 15px
+            max-width: 584px
+            width: 100%
+            input
+                background-color: $white-dark
+        &-button
+            font-size: 15px
+            font-weight: 600
+            background-color: $blue
+            width: 100%
+            border-radius: 5px
+            padding: 30px 96px
+            color: $white
+            margin-bottom: 17px
 @media screen and (max-width: 1200px)
     
     header
@@ -906,7 +980,7 @@ footer
             box-shadow: 0px 150px 42px 0px rgba(199, 199, 199, 0.00), 0px 96px 38px 0px rgba(199, 199, 199, 0.01), 0px 54px 32px 0px rgba(199, 199, 199, 0.05), 0px 24px 24px 0px rgba(199, 199, 199, 0.09), 0px 6px 13px 0px rgba(199, 199, 199, 0.10)
             width: 100%
             &-active
-                top: 127px
+                top: 116px
                 padding-bottom: 20px
             &-list
                 flex-direction: column
@@ -1083,7 +1157,7 @@ footer
             &-title
                 line-height: normal
             &-button
-                padding: 25px 35px
+                padding: 25px 28vw
                 display: block
                 margin: 0 auto
                 max-width: none
@@ -1153,3 +1227,19 @@ footer
                 &-second
                     .services__slider-info
                         padding: 31px 0px 162px 24px !important
+    .modal
+        &__window
+            max-width: 90%
+            width: 100%
+            height: 475px
+        &__zapis
+            &-bg
+                &::before
+                    display: none
+            &-title
+                font-size: 7vw
+            &-descript
+                font-size: 4vw
+        &__close
+            right: 15px
+            top: 10px

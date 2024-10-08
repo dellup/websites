@@ -48,7 +48,7 @@
                             <p class="header__call-title">Телефон</p>
                             <a href="tel:+79647888808" class="header__call-tel">8-964-788-88-08</a>
                         </div>
-                        <a href="#zapis" class="header__call-button"><div class="header__call-link">Запись на прием</div></a>
+                        <button class="header__call-button modal__open"><div class="header__call-link">Запись на прием</div></button>
                     </div>
                 </div>
                 <button class="header__burg"><img src="img/burger-menu.svg" alt="BurgerImg"></button>    
@@ -63,7 +63,7 @@
                         <div class="main__info">
                             <h1 class="main__info-title">Сияющая улыбка — залог вашего здоровья!</h1>
                             <p class="main__info-descript">Профессиональная стоматология для всей семьи: доверяйте опытным специалистам и наслаждайтесь безупречной улыбкой.</p>
-                            <a href="#zapis" class="main__button-link"><div class="main__info-button">Оставить заявку</div></a>
+                            <button class="main__button-link modal__open"><div class="main__info-button">Оставить заявку</div></button>
                         </div>
                         <div class="main__img"><img src="img/main-vrach.png" alt="VrachImg"></div>
                     </div>
@@ -71,7 +71,7 @@
                         <div class="main__info">
                             <h1 class="main__info-title">Сияющая улыбка — залог вашего здоровья!</h1>
                             <p class="main__info-descript">Профессиональная стоматология для всей семьи: доверяйте опытным специалистам и наслаждайтесь безупречной улыбкой.</p>
-                            <a href="#zapis" class="main__button-link"><div class="main__info-button">Оставить заявку</div></a>
+                            <button class="main__button-link modal__open"><div class="main__info-button">Оставить заявку</div></button>
                         </div>
                         <div class="main__img"><img src="img/main-vrach.png" alt="VrachImg"></div>
                     </div>
@@ -79,7 +79,7 @@
                         <div class="main__info">
                             <h1 class="main__info-title">Сияющая улыбка — залог вашего здоровья!</h1>
                             <p class="main__info-descript">Профессиональная стоматология для всей семьи: доверяйте опытным специалистам и наслаждайтесь безупречной улыбкой.</p>
-                            <a href="#zapis" class="main__button-link"><div class="main__info-button">Оставить заявку</div></a>
+                            <button class="main__button-link modal__open"><div class="main__info-button">Оставить заявку</div></button>
                         </div>
                         <div class="main__img"><img src="img/main-vrach.png" alt="VrachImg"></div>
                     </div>
@@ -379,6 +379,23 @@
             </div>
         </div>
     </footer>
+    <div class="modal__bg">
+        <div class="modal__window">
+            <div class="container">
+                <div class="modal__zapis-bg">
+                    <h2 class="modal__zapis-title">Записаться на прием</h2>
+                    <p class="zapis__descript zapis__descript-top modal__zapis-descript">Оставьте заявку! И я свяжусь с вами как можно скорее!</p>
+                    <form class="modal__zapis-form">
+                        <input type="text" class="zapis__form-input" placeholder="Ваше имя">
+                        <input type="text" class="zapis__form-input" placeholder="+7(___) ___-__-__">
+                        <button class="modal__zapis-button">Отправить</button>
+                    </form>
+                    <p class="zapis__descript modal__zapis-descript">Оставляя заявку, вы соглашаетесь на обработку персональных данных</p>
+                </div>
+            </div>
+            <button class="modal__close"><img src="img/close.svg" alt="CloseImg"></button>
+        </div>
+    </div>
     <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/beforeafter.jquery-1.0.0.min.js"></script>
