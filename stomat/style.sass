@@ -439,22 +439,28 @@ main
         max-width: 724px
         width: 100%
     &__link
-        position: relative
-    &__button
-        max-width: 300px
         font-size: 15px
-        padding: 31px 55px
+        color: $white
         &::before
-                content: ""
-                background-image: url("img/notebook.svg")
-                position: absolute
-                top: -15px
-                left: -33px
-                width: 59.39px
-                height: 80.946px
-                flex-shrink: 0
-                background-size: cover
-                z-index: 1
+            content: ""
+            background-image: url("img/notebook.svg")
+            position: absolute
+            top: -15px
+            left: -33px
+            width: 59.39px
+            height: 80.946px
+            flex-shrink: 0
+            background-size: cover
+            z-index: 1
+    &__button
+        position: relative
+        max-width: 252px
+        border-radius: 5px
+        width: 100%
+        background-color: $blue
+        padding: 31px 0px
+        font-weight: 600
+        
     &-button
         display: inline-flex
     &__block
@@ -572,6 +578,7 @@ main
             z-index: 2
         &-descript
             position: absolute
+            max-width: 380px
             left: 20px
             top: 380px
             font-size: 16px
@@ -968,7 +975,10 @@ footer
         height: calc(100vh - 100px)
     .header
         &__right
-            display: none
+            position: fixed
+            left: 0
+            top: -120%
+            transition: .5s
         &__burg
             display: block
         &__menu
@@ -980,11 +990,29 @@ footer
             background: $white
             box-shadow: 0px 150px 42px 0px rgba(199, 199, 199, 0.00), 0px 96px 38px 0px rgba(199, 199, 199, 0.01), 0px 54px 32px 0px rgba(199, 199, 199, 0.05), 0px 24px 24px 0px rgba(199, 199, 199, 0.09), 0px 6px 13px 0px rgba(199, 199, 199, 0.10)
             width: 100%
+            &-item
+                width: 100%
+                max-width: 1296px
+                text-align: center
+                background-color: $white-dark
+                padding: 17px 0px
+                &-submenu
+                    &::after
+                        position: absolute
+                        margin-left: auto
+                        margin-right: auto
+                        left: 136px
+                        top: 25px
+                        right: 0
+                        text-align: center
             &-active
                 top: 116px
                 padding-bottom: 20px
             &-list
                 flex-direction: column
+                max-width: 1296px
+                padding: 0px 20px
+                gap: 5px
         &__button
             display: block
         &__submenu
@@ -1158,10 +1186,11 @@ footer
             &-title
                 line-height: normal
             &-button
-                padding: 25px 28vw
+                padding: 25px 0px
                 display: block
                 margin: 0 auto
-                max-width: none
+                max-width: 100%
+                width: 100%
                 text-align: center
             
     .about
@@ -1182,11 +1211,17 @@ footer
             text-align: justify
             position: relative
         &__button
-            padding: 22px 25px
-            p
-                font-size: 2.6vw
+            padding: 25px 0px
+            max-width: none
+            text-align: center
+            display: flex
+            justify-content: center
+            p   
+                font-size: 13px
+                text-align: center
                 width: 100%
                 max-width: 180px
+        &__link
             &::before
                 left: -16px
                    
@@ -1215,7 +1250,7 @@ footer
             &-info
                 padding: 31px 0px 168px 24px !important
             &-title
-                font-size: 6vw
+                font-size: 5.6vw
                 max-width: 80%
             &-descript
                 font-size: 4vw

@@ -250,7 +250,7 @@ main
     &__header 
         background-color: $white-dark
         display: flex
-        justify-content: center
+        justify-content: space-between
         align-items: center
         gap: 10px
         border-radius: 10px
@@ -259,7 +259,6 @@ main
         &-button 
             font-size: 16px
             font-weight: 500
-            max-width: 240px
             width: 100%
             padding: 22px 38px
             color: $gray
@@ -483,9 +482,8 @@ main
                 right: 0
                 text-align: center
             &-active
-                .otveti__item-button
-                    &::before
-                        display: none
+                &::before
+                    display: none
         &-main 
             max-height: 0px 
             overflow: hidden
@@ -987,8 +985,8 @@ footer
             &-active
                 top: 100px
     .main
-        height: calc( 100vh - 200px )
-        margin-bottom: 100px
+        height: unset
+        margin-bottom: 50px
         &__block
             gap: 66px
         &__button-link
@@ -1015,7 +1013,7 @@ footer
             &-title
                 line-height: normal
             &-button
-                padding: 25px 32vw
+                padding: 25px 0px
                 display: block
                 margin: 0 auto
                 max-width: none
@@ -1073,10 +1071,11 @@ footer
                 margin-bottom: 20px
                 max-width: 195px
         &__header
-            display: grid
-            grid-template-columns: repeat(2, 1fr)
+            flex-wrap: wrap
             &-button
                 background-color: $white
+                max-width: 48%
+                padding: 25px 5px
                 &-active
                     background-color: $blue
         &__main

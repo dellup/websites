@@ -336,9 +336,9 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -350,7 +350,6 @@ main {
 .services__header-button {
   font-size: 16px;
   font-weight: 500;
-  max-width: 240px;
   width: 100%;
   padding: 22px 38px;
   color: #687087;
@@ -644,7 +643,7 @@ main {
   right: 0;
   text-align: center;
 }
-.otveti__item-button-active .otveti__item-button::before {
+.otveti__item-button-active::before {
   display: none;
 }
 .otveti__item-main {
@@ -1361,8 +1360,8 @@ footer {
     top: 100px;
   }
   .main {
-    height: calc(100vh - 200px);
-    margin-bottom: 100px;
+    height: unset;
+    margin-bottom: 50px;
   }
   .main__block {
     gap: 66px;
@@ -1398,7 +1397,7 @@ footer {
     line-height: normal;
   }
   .main__info-button {
-    padding: 25px 32vw;
+    padding: 25px 0px;
     display: block;
     margin: 0 auto;
     max-width: none;
@@ -1466,13 +1465,13 @@ footer {
     max-width: 195px;
   }
   .services__header {
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[2];
-    grid-template-columns: repeat(2, 1fr);
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .services__header-button {
     background-color: #FFF;
+    max-width: 48%;
+    padding: 25px 5px;
   }
   .services__header-button-active {
     background-color: #0091ff;
