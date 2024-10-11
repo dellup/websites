@@ -114,6 +114,9 @@ header {
   font-weight: 600;
   font-size: 14px;
 }
+.header__menu-mobile {
+  display: none;
+}
 .header__menu-list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -224,8 +227,7 @@ header {
 main {
   padding-top: 130px;
 }
-
-.container {
+main .container {
   height: 100%;
 }
 
@@ -1367,6 +1369,39 @@ footer {
     max-width: 1296px;
     padding: 0px 20px;
     gap: 5px;
+  }
+  .header__menu-mobile {
+    display: block;
+    padding: 0px 20px;
+    margin-top: 15px;
+  }
+  .header__mobile-title {
+    font-size: 13px;
+    font-weight: 500;
+    color: #687087;
+    margin-bottom: 3px;
+  }
+  .header__mobile-descript {
+    font-size: 16px;
+    font-weight: 500;
+    color: #040B1C;
+  }
+  .header__mobile-soz {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 15px 0px;
+    gap: 9px;
+  }
+  .header__mobile-button {
+    padding: 25px 0px;
+    background: #0091ff;
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 300;
+    display: block;
+    width: 100%;
+    border-radius: 10px;
   }
   .header__button {
     display: block;
