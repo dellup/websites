@@ -1,0 +1,9 @@
+@font-face {
+	font-family: 'TildaSansVF';
+	src: url('../fonts/tildasansvf.eot'); /* IE 9 Compatibility Mode */
+	src: url('../fonts/tildasansvf.eot?#iefix') format('embedded-opentype'), /* IE < 9 */
+		url('../fonts/tildasansvf.woff2') format('woff2'), /* Super Modern Browsers */
+		url('../fonts/tildasansvf.woff') format('woff'), /* Firefox >= 3.6, any other modern browser */
+		url('../fonts/tildasansvf.ttf') format('truetype'), /* Safari, Android, iOS */
+		url('../fonts/tildasansvf.svg#tildasansvf') format('svg'); /* Chrome < 4, Legacy iOS */
+}

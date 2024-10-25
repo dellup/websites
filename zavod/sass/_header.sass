@@ -1,0 +1,84 @@
+header
+    position: sticky
+    width: 100%
+    top: 0
+    left: 0
+    z-index: 2
+    background: $white
+
+.header
+    &__contacts
+        display: flex
+        gap: 56px
+    &__up
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 12px 0px 11px 0px
+        &Logo
+            max-width: 167px
+            width: 100%
+            margin-right: 36px
+        &Title
+            margin-right: 39px
+            font-size: 16px
+            font-weight: 700
+            max-width: 324px
+            width: 100%
+        &Address
+            max-width: 287px
+            width: 100%
+            &Title
+                color: #959595
+                font-weight: 500
+            &Descript
+                padding-top: 5px
+                font-size: 16px
+                font-weight: 500
+        &Time
+            max-width: 161px
+            width: 100%
+            &Title
+                font-size: 15px
+                font-weight: 400
+            &Descript
+                margin-top: 10px
+                font-size: 16px
+                font-weight: 700
+        &Mail
+            &Title
+                font-size: 15px
+                font-weight: 400
+            &Item
+                padding-top: 5px
+                margin-bottom: 5px
+                font-size: 16px
+                font-weight: 700
+    &__down
+        background-color: #329A65
+        .container
+            display: flex
+            justify-content: space-between
+            align-items: center
+        &Contacts
+            font-size: 16px
+            font-weight: 700
+            display: flex
+            gap: 25px
+            color: $white
+    &__menu
+        max-width: 942px
+        width: 100%
+        &List
+            display: flex
+            align-items: center
+            max-width: 942px
+            width: 100%
+            &Item
+                flex: 1 1 0px
+                text-align: center
+                a
+                    padding: 18px 0px
+                    color: $white
+                    font-weight: 400
+                    font-size: 18px
