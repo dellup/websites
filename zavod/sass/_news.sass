@@ -1,0 +1,57 @@
+.news
+    &__title
+        font-size: 35px
+        font-weight: 700
+    &__block
+        display: flex
+        flex-wrap: wrap
+        gap: 24px
+        margin-top: 30px
+
+    &__item
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center center
+        max-width: 416px
+        height: 488px
+        width: 100%
+        border-radius: 15px
+        position: relative
+        &::before
+            @include small-triangle
+        &Bg
+            background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 31.23%, #000 100%)
+            border-radius: 15px
+            height: 100%
+        &Info
+            display: flex
+            flex-direction: column
+            justify-content: flex-end
+            gap: 3px
+            height: 100%
+            padding-bottom: 37px
+            padding-left: 23px
+        &Date
+            font-weight: 600
+            color: $white
+            line-height: 20px
+        &Title
+            font-size: 20px
+            font-weight: 900
+            text-transform: uppercase
+            color: $white
+        &Descript
+            font-weight: 600
+            color: $white
+            line-height: 20px
+        &Link
+            display: flex
+            gap: 10px
+            color: $white
+            font-weight: 500
+            line-height: 20px
+            align-items: center
+            margin-top: 13px
+            img
+                width: 10px
+                height: 10px

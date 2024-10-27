@@ -12,7 +12,34 @@ $white: #FFFFFF
     font-family: 'Tilda Sans'
     scroll-margin: 140px
     font-size: 16px
-
+@mixin triangle
+    z-index: 1
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    bottom: 0
+    right: 0
+@mixin main-triangle
+    @include triangle
+    border-bottom: 75px solid #FFF
+    border-left: 63px solid transparent
+@mixin big-triangle
+    @include triangle
+    border-bottom: 63px solid #FFF
+    border-left: 50px solid transparent
+@mixin small-triangle
+    @include triangle
+    border-bottom: 63px solid #FFF
+    border-left: 35px solid transparent
+@mixin medium-triangle
+    @include triangle
+    border-bottom: 55px solid #FFF
+    border-left: 45px solid transparent
+@mixin contacts-triangle
+    @include triangle
+    border-bottom: 60px solid #FFF
+    border-left: 40px solid transparent
 body 
     position: relative
     background: $white
@@ -48,4 +75,8 @@ section
     margin-bottom:100px 
 
 @import 'sass/_header'
-
+@import 'sass/_zakaz'
+@import 'sass/_obratka'
+@import 'sass/_contacts'
+@import 'sass/_footer'
+@import 'sass/_modal'

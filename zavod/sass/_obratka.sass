@@ -1,0 +1,87 @@
+.obratka
+    &__img
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+
+    &__bg
+        background: linear-gradient(0deg, rgba(0, 0, 0, 0.90) 0%, rgba(0, 0, 0, 0.90) 100%)
+    &__block
+        display: flex
+        justify-content: space-between
+        &Img
+            max-width: 455px
+            width: 100%
+            margin-left: 25px
+            img
+                height: 100%
+    &__right
+        margin-right: 110px
+        padding-top: 20px
+        max-width: 416px
+        width: 100%
+        &Title
+            font-size: 40px
+            color: $white
+            font-weight: 900
+            text-transform: uppercase
+        &Descript
+            font-size: 17px
+            color: #FFF
+            font-weight: 500
+            margin-bottom: 20px
+            max-width: 352px
+            width: 100%
+            line-height: 25px
+            &Bottom
+                font-size: 15px
+                color: #B6B6B6
+                font-weight: 500
+                margin-bottom: 20px
+    &__form
+        width: 100%
+        display: flex
+        flex-direction: column
+        &Input, &Textarea
+            color: #7A7A7B
+            font-weight: 500
+            font-size: 15px
+            color: #7A7A7B
+            background: none
+            border: none
+            border-bottom: 1px solid #FFF
+            outline: 0 none
+            padding-bottom: 12px
+            margin-bottom: 34px
+        &Textarea
+            padding-bottom: 34px
+            resize: none
+        &File
+            display: flex
+            align-items: center
+            cursor: pointer
+            &Title
+                margin-right: 8px
+                color: #7A7A7B
+                font-size: 15px
+                font-weight: 500
+            &Input
+                display: none
+            img
+                width: 16px
+                height: 18px
+            &name
+                margin-left: 10px
+                color: #7A7A7B
+                font-size: 15px
+                font-weight: 500
+        &Button
+            margin: 20px 0px
+            background-color: $yellow
+            color: $white
+            font-weight: 600
+            width: 100%
+            padding: 26px 0px
+            text-align: center
+            margin-top: 24px
+                            
