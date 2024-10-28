@@ -84,6 +84,12 @@ footer
                         font-size: 15px
                         color: $white
                         font-weight: 500
+                    &Block
+                        a
+                            font-size: 17px
+                            font-weight: 600
+                            line-height: 22px
+                            color: $white
                 &Mail
                     display: flex
                     flex-direction: column
@@ -91,23 +97,27 @@ footer
                         font-size: 15px
                         color: $white
                         font-weight: 500
-                    font-size: 17px
-                    font-weight: 400
-                    line-height: 22px
-                    color: $white
+                    &Block
+                        font-size: 17px
+                        font-weight: 400
+                        line-height: 22px
+                        color: $white
                 &Address
                     max-width: 257px
                     width: 100%
                     display: flex
                     flex-direction: column
-                    p
+                    &Title
                         font-size: 15px
                         color: $white
                         font-weight: 500
-                    font-size: 17px
-                    font-weight: 400
-                    line-height: 22px
-                    color: $white
+                    &Descript
+                        font-size: 17px
+                        font-weight: 400
+                        line-height: 22px
+                        color: $white
+                        &Mobile
+                            display: none
 
     &__soz
         margin-top: 13px
@@ -133,3 +143,93 @@ footer
         p
             font-weight: 400
             color: $white
+
+@media screen and (max-width: 900px)
+    .footer
+        &__up
+            display: flex
+            flex-direction: column
+            gap: 25px
+            &Nav
+                gap: 105px
+@media screen and (max-width: 650px)
+    .footer
+        &__up
+            &Nav
+                flex-direction: column
+                gap: 25px
+                margin-bottom: 25px
+                &Title
+                    font-size: 18px
+                &List
+                    li
+                        a
+                            font-size: 15p
+                &Contacts
+                    &Tel
+                        display: flex
+                        flex-direction: column
+                        gap: 2px
+                        p
+                            font-size: 13px
+                            font-weight: 400
+                        a
+                            font-size: 15px
+                            font-weight: 600
+                        &Block
+                            display: flex
+                            gap: 8px
+                            a
+                                font-size: 15px
+                                font-weight: 600
+                    &Mail
+                        display: flex
+                        flex-direction: column
+                        gap: 2px
+                        p
+                            font-size: 13px
+                            font-weight: 400
+                        &Block
+                            display: flex
+                            gap: 8px
+                            a
+                                font-size: 15px
+                                color: $white
+                                font-weight: 600
+                    &Address
+                        display: flex
+                        flex-direction: column
+                        gap: 2px
+                        max-width: 285px
+                        &Title
+                            font-size: 13px
+                            font-weight: 400
+                        &Descript
+                            display: none
+                            &Mobile
+                                display: flex
+                                font-size: 15px
+                                font-weight: 500
+                                max-width: 325px
+                                color: $white
+                            
+            &Info
+                max-width: none
+                &Logo
+                    img
+                        max-width: 80px
+                &Title
+                    font-size: 15px
+                    font-weight: 400
+                    max-width: 285px
+                &Worktime
+                    font-size: 14px
+                    font-weight: 600
+                    &Block
+                        font-size: 13px
+                        font-weight: 400
+                &Button
+                    max-width: none
+        &__soz
+            margin-top: 0px
+            padding-bottom: 24px

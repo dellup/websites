@@ -23,10 +23,14 @@
             flex-direction: column
             padding: 21px 0px 32px 28px
             gap: 19px
+            &Mobile
+                display: none
             &Title
                 color: #969696
                 font-size: 15px
                 font-weight: 500
+                span
+                    display: none
         &Title
             font-size: 25px
             font-weight: 700
@@ -49,6 +53,8 @@
                     font-size: 17px
                     font-weight: 500
                     line-height: 22px
+                &Mobile
+                    display: none
             &Mail
                 display: flex
                 gap: 10px
@@ -77,4 +83,46 @@
             &Descript
                 font-size: 17px
                 font-weight: 700
-        
+@media screen and (max-width: 900px)
+    .contacts
+        &__map
+            margin-top: 90px
+            iframe
+                height: 420px
+            .container
+                top: -60px
+                left: 0px
+        &__card
+            &About
+                &Tel
+                    display: none
+                    &Mobile
+                        display: flex
+                        gap: 8px
+                        a
+                            font-size: 16px
+                            font-weight: 600
+                &Mail
+                    display: flex
+                    flex-direction: column
+                    gap: 5px
+                    color: #2E2E2E
+                    font-size: 15px
+                    padding-top: 5px
+            &Worktime
+                display: none
+            &Title
+                font-size: 23px
+            &Info
+                &Mobile
+                    display: block
+                    padding-bottom: 5px
+                    padding-top: 15px
+                &Title
+                    p
+                        display: none
+                    span
+                        font-size: 13px
+                        display: block
+                        color: #969696
+                        font-weight: 500

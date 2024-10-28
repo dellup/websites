@@ -15,6 +15,10 @@ header
         justify-content: space-between
         align-items: center
         padding: 12px 0px 11px 0px
+        &Mobile
+            position: fixed
+            left: 0
+            top: -300%
         &Logo
             max-width: 167px
             width: 100%
@@ -82,6 +86,8 @@ header
                     color: $white
                     font-weight: 400
                     font-size: 18px
+    &__burger
+        display: none
 
 @media screen and (max-width: 1300px) 
     .header
@@ -89,4 +95,104 @@ header
             max-width: 621px
             &List
                 max-width: 621px
+        &__up
+            &Title
+                max-width: 190px
 
+@media screen and (max-width: 900px) 
+    .header
+        &__burger
+            display: block
+            width: 28px
+            height: 16px
+        &__up
+            padding-top: 52px
+            &Logo
+                width: 133px
+            &Title
+                display: none
+            &Address
+                &Title
+                    color: $white
+                    font-size: 13px
+                &Descript
+                    font-size: 15px
+                    color: $white
+                    max-width: 278px
+            &Mail
+                &Title
+                    color: $white
+                    font-size: 13px
+                a
+                    font-size: 15px
+                    color: $white
+                    font-weight: 500
+                &Links
+                    display: flex
+                    gap: 10px
+            &Time
+                &Title
+                    color: $white
+                    font-size: 13px
+                &Descript
+                    color: $white
+                    font-size: 13px
+            &Tel
+                display: flex
+                flex-direction: column
+                gap: 10px
+                a
+                    color: $white
+                    font-size: 16px
+                    font-weight: 700
+            &Mobile
+                padding-bottom: 20px
+                transition: .3s
+                right: 0
+                &Active
+                    display: block
+                    width: 100%
+                    transition: .3s
+                    left: 0
+                    z-index: 1
+                    top: 0
+                    background-color: $green
+                    padding-top: 60px
+                    &Logo
+                        width: 100%
+                        padding-bottom: 18px
+                        display: flex
+                        justify-content: space-between
+                        align-items: center
+                        &Img
+                            max-width: 133px
+                        &Krest
+                            max-width: 14px
+                    &Title
+                        display: block
+                        max-width: 324px
+                        color: $white
+                        font-size: 14px
+                    &Contacts
+                        display: flex !important
+                        flex-direction: column
+                        gap: 15px
+
+                    &Line
+                        height: 1PX
+                        background-color: #6BB690
+                        width: 100%
+                        margin: 15px 0px
+                    &Menu
+                        &List
+                            display: flex
+                            flex-direction: column
+                            gap: 10px
+                            li
+                                font-size: 15px
+                                color: $white
+                                font-weight: 400
+        &__contacts
+            display: none
+        &__down
+            display: none

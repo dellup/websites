@@ -55,3 +55,61 @@
             img
                 width: 10px
                 height: 10px
+
+@media screen and (max-width: 1300px)
+    .news
+        &__block
+            justify-content: center
+        &__title
+            margin-left: 24px
+@media screen and (max-width: 900px)
+    .news
+        .slick-arrow
+            position: absolute
+            z-index: 1
+            font-size: 0px
+            width: 40px
+            height: 40px
+            background: #363636
+            transform: translateY(-50%)
+            background-position: center center
+            background-size: auto
+            background-repeat: no-repeat
+            border-radius: 3px
+            bottom: -90px
+        .slick-prev
+            right: 50px
+            background-image: url("../img/leftarrow.svg")
+        .slick-next
+            right: 0px
+            background-image: url("../img/rightarrow.svg")
+        &__item
+            display: flex !important
+            max-width: none
+            height: 560px
+            &Bg
+                width: 100%
+@media screen and (max-width: 650px)
+    .news
+        &__item
+            height: 395px
+            &Date
+                font-size: 13px
+                font-weight: 500
+            &Title
+                font-size: 17px
+                font-weight: 900
+                max-width: 210px
+            &Descript
+                font-size: 14px
+                font-weight: 500
+            &Link
+                line-height: 16px
+                font-size: 13px
+                gap: 8px
+                img
+                    width: 8px
+                    height: 8px
+        &__title
+            font-size: 23px
+            margin-left: 0

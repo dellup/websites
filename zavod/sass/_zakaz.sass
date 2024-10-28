@@ -10,3 +10,27 @@
         align-items: center
         padding: 69px 0px 38px 25px
         
+@media screen and (max-width: 900px)
+    .zakaz
+        &__block
+            &Item
+                &:nth-child(3)
+                    display: none
+                &:nth-child(4)
+                    display: none
+
+@media screen and (max-width: 650px)
+    .zakaz
+        &__title
+            font-size: 23px
+            font-weight: 700
+            padding-top: 25px
+        &__block
+            padding: 29px 0px 30px 0px
+            justify-content: space-between
+            align-items: center
+            &Item
+                img
+                    max-width: 154px !important
+                    width: 100% !important
+                

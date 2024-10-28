@@ -50,3 +50,37 @@ $('.modal__close').click(() => {
         }, 150)
     }, 150)
 })
+$('.header__burger').click((e) => {
+    let button = $(e.currentTarget)
+    let content = button.siblings('.header__upMobile')
+    content.toggleClass('header__upMobileActive')
+})
+$('.header__upMobileActiveLogoKrest').click((e) => {
+    $('.header__upMobile').toggleClass('header__upMobileActive');
+})
+
+let width = $('body').width()
+
+if (width <= 1300){
+    $('.product__block').slick({
+        fade: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    })
+}
+if (width <= 900){
+    $('.news__block').slick({
+        fade: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 3000,
+    })
+}
+

@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="fonts/stylesheet.css">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
@@ -28,6 +27,49 @@
                         <h3 class="header__upMailTitle">Почта</h3>
                         <a href="mailto:ptgmk2008@yahoo.com"class="header__upMailItem">ptgmk2008@yahoo.com</a>
                         <a href="mailto:ptgmk2008@gmail.com"class="header__upMailItem">ptgmk2008@gmail.com</a>
+                    </div>
+                </div>
+                <button class="header__burger"><img src="img/burger.svg" alt="Burger"></button>
+                <div class="header__upMobile">
+                    <div class="container">
+                        <div class="header__upMobileActiveLogo">
+                            <img class="header__upMobileActiveLogoImg" src="img/modileLogo.svg" alt="Logo">
+                            <img class="header__upMobileActiveLogoKrest" src="img/krestWhite.svg" alt="Krest">
+                        </div>
+                        <p class="header__upTitle header__upMobileActiveTitle">ПРОМЫШЛЕННЫЕ ТЕХНОЛОГИИ ГОРНО- <br>ПРОМЫШЛЕННОГО КОМПЛЕКСА</p>
+                        <div class="header__upMobileActiveLine"></div>
+                        <nav class="header__upMobileActiveMenu">
+                            <ul class="header__upMobileActiveMenuList">
+                                <li><a href="#">Главная</a></li>
+                                <li><a href="#">Продукция</a></li>
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="#">Новости</a></li>
+                                <li><a href="#">О компании</a></li>
+                                <li><a href="#">Контакты</a></li>
+                            </ul>
+                        </nav>
+                        <div class="header__upMobileActiveLine"></div>
+                        <div class="header__contacts header__upMobileActiveContacts">
+                            <div class="header__upAddress">
+                                <h3 class="header__upAddressTitle">Наш адрес</h3>
+                                <p class="header__upAddressDescript">г. Санкт Петербург, Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
+                            </div>
+                            <div class="header__upMail">
+                                <h3 class="header__upMailTitle">Почта</h3>
+                                <div class="header__upMailLinks">
+                                    <a href="mailto:ptgmk2008@yahoo.com"class="header__upMailItem">ptgmk2008@yahoo.com</a>
+                                    <a href="mailto:ptgmk2008@gmail.com"class="header__upMailItem">ptgmk2008@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="header__upTime">
+                                <h3 class="header__upTimeTitle">Время работы</h3>
+                                <p class="header__upTimeDescript">ПН-ПТ с 9 00 до 17 00</p>
+                            </div>
+                            <div class="header__upTel">
+                                <a href="tel:+78123277665">8(812)327-76-65</a>
+                                <a href="tel:+78123270968">8(812)327-09-68</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -146,6 +188,14 @@
                 <div class="about__block">
                     <div class="about__info">
                         <h2 class="about__infoTitle">О нашей компании</h2>
+                        <div class="about__right about__rightMobile">
+                            <div class="about__rightImg" style="background-image: url('img/about.jpg');">
+                                <div class="about__rightImgBg">
+                                    <h3 class="about__rightTitle">10</h3>
+                                    <p class="about__rightDescript">Более лет на рынке</p>
+                                </div>
+                            </div>
+                        </div>
                         <div class="about__infoDescript">
                             <p>Комплексное обеспечение предприятий широким спектром технологий, оборудования, комплектующих и запасных частей мирового уровня качества.</p>
                             <p>Ассортимент поставляемый нашей компанией, позволяет удовлетворить потребности клиентов в высокотехнологичном оборудовании вакуумной фильтрации, оборудовании и запасных частей горнообогатительного комплекса, оборудовании для конвейерных и транспортных систем, насосном оборудовании, запорной арматуры, грузоподъемным оборудованием и оснасткой к нему.</p>
@@ -155,7 +205,7 @@
                         </div>
                         <a href="#" class="about__infoLink">Подробнее</a>
                     </div>
-                    <div class="about__right">
+                    <div class="about__right about__rightPC">
                         <div class="about__rightImg" style="background-image: url('img/about.jpg');">
                             <div class="about__rightImgBg">
                                 <h3 class="about__rightTitle">10</h3>
@@ -238,10 +288,10 @@
                 <div class="container">
                     <h2 class="zakaz__title">Наши заказчики</h2>
                     <div class="zakaz__block">
-                        <div class="zakaz__blockItem"><img src="img/severstal.png" alt="Seversral"></div>
+                        <div class="zakaz__blockItem"><img style="width: 200px;" src="img/severstal.svg" alt="Seversral"></div>
                         <div class="zakaz__blockItem"><img src="img/evraz.png" alt="Evraz"></div>
-                        <div class="zakaz__blockItem"><img src="img/metalloinvest.png" alt="Metalloinvest"></div>
-                        <div class="zakaz__blockItem"><img src="img/fosargo.png" alt="Fostargo"></div>
+                        <div class="zakaz__blockItem"><span><img src="img/metalloinvest.png" alt="Metalloinvest"></div></span>
+                        <div class="zakaz__blockItem"><span><img src="img/fosargo.png" alt="Fostargo"></div></span>
                     </div>
                 </div>
             </div>
@@ -269,6 +319,7 @@
                                 </form>
                                 <p class="obratka__rightDescriptBottom">Нажимая на кнопку вы соглашаетесь с политикой обработки персональных данных</p>
                             </div>
+                            <div class="obratka__blockImgMobile"><img src="img/iphone.png" alt="Iphone"></div>
                         </div>
                     </div>
                 </div>
@@ -289,7 +340,7 @@
                                 <p class="contacts__cardAddressDescript">г. Санкт Петербург, Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
                             </div>
                             <div class="contacts__cardAbout">
-                                <h4 class="contacts__cardInfoTitle">Контакты:</h4>
+                                <h4 class="contacts__cardInfoTitle"><span>Почта:</span><p>Контакты:</p></h4>
                                 <div class="contacts__cardAboutTel">
                                     <a href="tel:+78123277665">8 (812) 327-76-65</a>
                                     <a href="tel:+78123270968">8 (812) 327-09-68</a>
@@ -297,6 +348,11 @@
                                 <div class="contacts__cardAboutMail">
                                     <a href="mailto:ptgmk2008@yahoo.com">ptgmk2008@yahoo.com</a>
                                     <a href="mailto:ptgmk2008@gmail.com">ptgmk2008@gmail.com</a>
+                                </div>
+                                <h4 class="contacts__cardInfoTitle contacts__cardInfoMobile">Телефон и мессенджеры:</h4>
+                                <div class="contacts__cardAboutTelMobile">
+                                    <a href="tel:+78123277665">8 (812) 327-76-65</a>
+                                    <a href="tel:+78123270968">8 (812) 327-09-68</a>
                                 </div>
                                 <div class="contacts__cardAboutSoz">
                                     <a href="#" class="contacts__cardAboutSozItem">
@@ -366,17 +422,22 @@
                             <div class="footer__upNavContactsBlock">
                                 <div class="footer__upNavContactsTel">
                                     <p>Телефон</p>
-                                    <a href="tel:+78123277665">8 (812) 327-76-65</a>
-                                    <a href="tel:+78123270968">8 (812) 327-09-68</a>
+                                    <div class="footer__upNavContactsTelBlock">
+                                        <a href="tel:+78123277665">8 (812) 327-76-65</a>
+                                        <a href="tel:+78123270968">8 (812) 327-09-68</a>
+                                    </div>
                                 </div>
                                 <div class="footer__upNavContactsMail">
                                     <p>E-mail</p>
-                                    <a href="mailto:ptgmk2008@yahoo.com">ptgmk2008@yahoo.com</a>
-                                    <a href="mailto:ptgmk2008@gmail.com">ptgmk2008@gmail.com</a>
+                                    <div class="footer__upNavContactsMailBlock">
+                                        <a href="mailto:ptgmk2008@yahoo.com">ptgmk2008@yahoo.com</a>
+                                        <a href="mailto:ptgmk2008@gmail.com">ptgmk2008@gmail.com</a>
+                                    </div>
                                 </div>
                                 <div class="footer__upNavContactsAddress">
-                                    <p>Адрес</p>
-                                    г. Санкт Петербург,<br> Богатырский пр., д. 18, корпус 3 лит А офис 223а
+                                    <p class="footer__upNavContactsAddressTitle">Адрес</p>
+                                    <p class="footer__upNavContactsAddressDescript">г. Санкт Петербург,<br> Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
+                                    <p class="footer__upNavContactsAddressDescriptMobile">г. Санкт Петербург, Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
                                 </div>
                             </div>
                         </div>
