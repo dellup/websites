@@ -76,41 +76,13 @@ button
 section
     margin-bottom:100px 
 
-.up
-    &__back
-        display: flex
-        padding-top: 37px
-        align-items: center
-        &Arrow
-            width: 18px
-            height: 10px
-            margin-right: 27px
-        p
-            font-weight: 500
-    &__diagonal
-        width: 27px
-        height: 1px
-        background: $black
-        transform: rotate(110deg)
-.main
-    display: none
-.product
-    display: none
-.about
-    display: none
-.news
-    display: none
-.zakaz
-    display: none
-.obratka
-    display: none
-.contacts
-    display: none
-// footer
-//     display: none
+
 @import 'sass/_header'
 @import 'sass/_zakaz'
 @import 'sass/_obratka'
 @import 'sass/_contacts'
 @import 'sass/_footer'
 @import 'sass/_modal'
+@media screen and (max-width: 650px)
+    section
+        margin-bottom: 50px

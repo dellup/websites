@@ -1344,6 +1344,29 @@ footer {
   margin-top: 24px;
 }
 
+.up__back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-top: 37px;
+}
+.up__backArrow {
+  width: 18px;
+  height: 10px;
+  margin-right: 27px;
+}
+.up__back p {
+  font-weight: 500;
+}
+.up__diagonal {
+  margin-top: 8px;
+  width: 27px;
+  height: 1px;
+  background: #272727;
+  -webkit-transform: rotate(110deg);
+          transform: rotate(110deg);
+}
+
 .product__title {
   font-size: 35px;
   font-weight: 800;
@@ -1928,5 +1951,8 @@ footer {
   }
   .main .slick-dots {
     left: 50%;
+  }
+  .up__back {
+    display: none;
   }
 }
