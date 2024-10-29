@@ -118,10 +118,22 @@
     &__block
         flex-direction: column
         gap: 15px
-        p
-            font-size: 18px
-            font-weight: 400
-            line-height: 25px
+        align-items: flex-start
+        &Text
+            display: flex
+            flex-direction: column
+            gap: 11px
+            p
+                font-size: 18px
+                font-weight: 400
+                line-height: 25px
+            h3
+                color: #000
+                font-size: 18px
+                font-style: normal
+                font-weight: 800
+                line-height: 25px
+                text-transform: uppercase
 @media screen and (max-width: 1300px) 
     .container
         padding: 0px 20px
@@ -150,11 +162,15 @@
 
         &__block
             gap: 10px
-            p
-                text-align: justify
-                font-size: 15px
-                line-height: normal
-                font-weight: 400
+            &Text
+                p
+                    text-align: justify
+                    font-size: 15px
+                    line-height: normal
+                    font-weight: 400
+                h3
+                    font-size: 16px
+                    font-weight: 800
         &__table
             padding-top: 30px
             img
