@@ -6,7 +6,7 @@
           box-sizing: border-box;
   scroll-behavior: smooth;
   font-family: "Tilda Sans";
-  scroll-margin: 140px;
+  scroll-margin: 180px;
   font-size: 16px;
 }
 
@@ -135,6 +135,38 @@ header {
   font-size: 16px;
   font-weight: 700;
 }
+.header__menu-item-submenu {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  color: #FFFFFF;
+}
+.header__menu-item-submenu::after {
+  content: "";
+  position: absolute;
+  background-image: url("../img/header-arrow.svg");
+  background-repeat: no-repeat;
+  top: 7px;
+  width: 10px;
+  height: 8px;
+  right: 26px;
+}
+.header__submenu-list {
+  width: 100%;
+  display: none;
+  position: absolute;
+  top: 20px;
+  left: 0px;
+}
+.header__submenu-list-active {
+  display: block;
+  background: #339966;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.header__submenu-item {
+  padding-top: 10px;
+}
 .header__down {
   background-color: #329A65;
 }
@@ -177,6 +209,7 @@ header {
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
   text-align: center;
+  position: relative;
 }
 .header__menuListItem a {
   padding: 18px 0px;
@@ -191,6 +224,9 @@ header {
 @media screen and (max-width: 1300px) {
   .header__menu {
     max-width: 621px;
+  }
+  .header__menu-item-submenu::after {
+    right: 9px;
   }
   .header__menuList {
     max-width: 621px;
@@ -340,6 +376,13 @@ header {
   .header__down {
     display: none;
   }
+  .header__menu-item-submenu {
+    position: relative;
+  }
+  .header__menu-item-submenu::after {
+    right: 0;
+    left: 55px;
+  }
 }
 .zakaz__bg {
   background-color: #FFCC99;
@@ -410,6 +453,7 @@ header {
   max-width: 455px;
   width: 100%;
   margin-left: 25px;
+  margin-bottom: -5px;
 }
 .obratka__blockImgMobile {
   display: none;
@@ -1246,7 +1290,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding-top: 37px;
 }
 .up__backArrow {
   width: 18px;
@@ -1497,6 +1540,9 @@ footer {
   font-size: 15px;
   font-style: normal;
   font-weight: 600;
+}
+.news .container {
+  padding-top: 37px;
 }
 
 @media screen and (max-width: 1300px) {

@@ -4,7 +4,6 @@
 .up
     &__back
         display: flex
-        padding-top: 37px
         &Arrow
             width: 18px
             height: 10px
@@ -19,18 +18,22 @@
         transform: rotate(110deg)
 .obratka
     display: none
+@import '_about'
+section
+    margin-bottom: 250px
 .about
     &__info
         &Title
             text-transform: uppercase
         &Date
-            margin-top: -30px
-            margin-bottom: -15px
+            margin-top: -20px
+            margin-bottom: -5px
             color: #7A7A7B
             font-size: 15px
             font-weight: 500
             line-height: 20px
-@import '_about'
+    &__right
+        margin-bottom: -300px
 
 @media screen and (max-width: 1300px) 
     .container
@@ -47,6 +50,7 @@
         &__right
             background-color: #fff
             margin-bottom: 20px
+            margin-left: 23px
             &Img
                 bottom: 0
         &__info
@@ -70,4 +74,6 @@
     .up
         &__back
             display: none
+    section
+        margin-bottom: 50px
 

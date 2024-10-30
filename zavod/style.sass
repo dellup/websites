@@ -31,6 +31,16 @@ $white: #FFFFFF
     @include triangle
     border-bottom: 60px solid #FFF
     border-left: 40px solid transparent
+@mixin footer-triangle
+    z-index: 1
+    content: ""
+    position: absolute
+    width: 0
+    height: 0
+    top: -1px
+    right: 0
+    border-top: 60px solid #FFF
+    border-left: 60px solid transparent
 
 *   
     color: $black
@@ -39,7 +49,7 @@ $white: #FFFFFF
     box-sizing: border-box
     scroll-behavior: smooth
     font-family: 'Tilda Sans'
-    scroll-margin: 140px
+    scroll-margin: 180px
     font-size: 16px
 
 body 

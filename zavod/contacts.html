@@ -42,9 +42,16 @@
                             <ul class="header__upMobileActiveMenuList">
                                 <li><a href="/">Главная</a></li>
                                 <li><a href="product.html">Продукция</a></li>
-                                <li><a href="#">Услуги</a></li>
+                                <li class="header__menu-item-submenu">
+                                    Услуги
+                                    <ul class="header__submenu-list">
+                                        <li class="header__submenu-item"><a href="#">Страница 1</a></li>
+                                        <li class="header__submenu-item"><a href="#">Страница 2</a></li>
+                                        <li class="header__submenu-item"><a href="#">Страница 3</a></li>
+                                    </ul>
+                                </li>
                                 <li><a href="news.html">Новости</a></li>
-                                <li><a href="#">О компании</a></li>
+                                <li><a href="about.html">О компании</a></li>
                                 <li><a href="contacts.html">Контакты</a></li>
                             </ul>
                         </nav>
@@ -80,9 +87,16 @@
                     <ul class="header__menuList">
                         <li class="header__menuListItem"><a href="/">Главная</a></li>
                         <li class="header__menuListItem"><a href="product.html">Продукция</a></li>
-                        <li class="header__menuListItem"><a href="#">Услуги</a></li>
+                        <li class="header__menuListItem header__menu-item-submenu">
+                            Услуги
+                            <ul class="header__submenu-list">
+                                <li class="header__submenu-item"><a href="#">Страница 1</a></li>
+                                <li class="header__submenu-item"><a href="#">Страница 2</a></li>
+                                <li class="header__submenu-item"><a href="#">Страница 3</a></li>
+                            </ul>
+                        </li>
                         <li class="header__menuListItem"><a href="news.html">Новости</a></li>
-                        <li class="header__menuListItem"><a href="#">О компании</a></li>
+                        <li class="header__menuListItem"><a href="about.html">О компании</a></li>
                         <li class="header__menuListItem"><a href="contacts.html">Контакты</a></li>
                     </ul>
                 </nav>
@@ -155,11 +169,9 @@
             </div>
         </section>
         <section class="obratka">
-            <div class="obratka__img" style="background-image: url('img/zayavka.jpg');">
                 <div class="obratka__bg">
                     <div class="container">
                         <div class="obratka__block">
-                            <div class="obratka__blockImg"><img src="img/iphone.png" alt="Iphone"></div>
                             <div class="obratka__right">
                                 <h2 class="obratka__rightTitle">Оставьте заявку</h2>
                                 <p class="obratka__rightDescript">Заполните форму связи, и мы свяжемся с вами в ближайшее время</p>
@@ -175,9 +187,8 @@
                                     </div>
                                     <button class="obratka__formButton">Отправить</button>
                                 </form>
-                                <p class="obratka__rightDescriptBottom">Нажимая на кнопку вы соглашаетесь с политикой обработки персональных данных</p>
+                                <p class="obratka__rightDescriptBottom">Нажимая на кнопку, вы соглашаетесь с политикой обработки персональных данных</p>
                             </div>
-                            <div class="obratka__blockImgMobile"><img src="img/iphone.png" alt="Iphone"></div>
                         </div>
                     </div>
                 </div>
@@ -185,81 +196,83 @@
         </section>
     </main>
     <footer>
-        <div class="container">
-            <div class="footer__up">
-                <div class="footer__upInfo">
-                    <a href='#' class="footer__upInfoLogo">
-                        <img src="img/LogoFoot.svg" alt="LogoFoot">
-                        <h3 class="footer__upInfoTitle">Промышленные технологии горно-промышленного комплекса</h3>
-                    </a>
-                    <div class="footer__upInfoWorktime">
-                        <div class="footer__upInfoWorktimeBlock">
-                            <img src="img/watch.svg" alt="Watch">
-                            Время работы
+        <div class="footer__bg">
+            <div class="container">
+                <div class="footer__up">
+                    <div class="footer__upInfo">
+                        <a href='#' class="footer__upInfoLogo">
+                            <img src="img/LogoFoot.svg" alt="LogoFoot">
+                            <h3 class="footer__upInfoTitle">Промышленные технологии горно-промышленного комплекса</h3>
+                        </a>
+                        <div class="footer__upInfoWorktime">
+                            <div class="footer__upInfoWorktimeBlock">
+                                <img src="img/watch.svg" alt="Watch">
+                                Время работы
+                            </div>
+                            ПН-ПТ с 9 00 до 17 00
                         </div>
-                        ПН-ПТ с 9 00 до 17 00
+                        <button class="footer__upInfoButton modal__open">Заказать звонок</button>
                     </div>
-                    <button class="footer__upInfoButton modal__open">Заказать звонок</button>
-                </div>
-                <nav class="footer__upNav">
-                    <div class="footer__upNavCompany">
-                        <h3 class="footer__upNavTitle">Компания</h3>
-                        <ul class="footer__upNavList">
-                            <li><a href="#">Услуги</a></li>
-                            <li><a href="#">О компании</a></li>
-                            <li><a href="product.html">Продукция</a></li>
-                            <li><a href="news.html">Новости</a></li>
-                            <li><a href="contacts.html">Контакты</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__upNavKatalog">
-                        <h3 class="footer__upNavTitle">Каталог оборудования</h3>
-                        <ul class="footer__upNavList">
-                            <li><a href="#">Вакуумная фильтрация</a></li>
-                            <li><a href="#">Обогатительное оборудование</a></li>
-                            <li><a href="#">Грузоподъемные механизмы</a></li>
-                            <li><a href="#">Насосные оборудования</a></li>
-                            <li><a href="#">Полимеры полиуретаны</a></li>
-                            <li><a href="#">Металлоконструкция</a></li>
-                        </ul>
-                    </div>
-                    <div class="footer__upNavContacts">
-                        <h3 class="footer__upNavTitle">Контакты</h3>
-                        <div class="footer__upNavContactsBlock">
-                            <div class="footer__upNavContactsTel">
-                                <p>Телефон</p>
-                                <div class="footer__upNavContactsTelBlock">
-                                    <a href="tel:+78123277665">8 (812) 327-76-65</a>
-                                    <a href="tel:+78123270968">8 (812) 327-09-68</a>
+                    <nav class="footer__upNav">
+                        <div class="footer__upNavCompany">
+                            <h3 class="footer__upNavTitle">Компания</h3>
+                            <ul class="footer__upNavList">
+                                <li><a href="#">Услуги</a></li>
+                                <li><a href="about.html">О компании</a></li>
+                                <li><a href="product.html">Продукция</a></li>
+                                <li><a href="news.html">Новости</a></li>
+                                <li><a href="contacts.html">Контакты</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__upNavKatalog">
+                            <h3 class="footer__upNavTitle">Каталог оборудования</h3>
+                            <ul class="footer__upNavList">
+                                <li><a href="vacuum.html">Вакуумная фильтрация</a></li>
+                                <li><a href="#">Обогатительное оборудование</a></li>
+                                <li><a href="#">Грузоподъемные механизмы</a></li>
+                                <li><a href="#">Насосные оборудования</a></li>
+                                <li><a href="#">Полимеры полиуретаны</a></li>
+                                <li><a href="#">Металлоконструкция</a></li>
+                            </ul>
+                        </div>
+                        <div class="footer__upNavContacts">
+                            <h3 class="footer__upNavTitle">Контакты</h3>
+                            <div class="footer__upNavContactsBlock">
+                                <div class="footer__upNavContactsTel">
+                                    <p>Телефон</p>
+                                    <div class="footer__upNavContactsTelBlock">
+                                        <a href="tel:+78123277665">8 (812) 327-76-65</a>
+                                        <a href="tel:+78123270968">8 (812) 327-09-68</a>
+                                    </div>
+                                </div>
+                                <div class="footer__upNavContactsMail">
+                                    <p>E-mail</p>
+                                    <div class="footer__upNavContactsMailBlock">
+                                        <a href="mailto:ptgmk2008@yahoo.com">ptgmk2008@yahoo.com</a>
+                                        <a href="mailto:ptgmk2008@gmail.com">ptgmk2008@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="footer__upNavContactsAddress">
+                                    <p class="footer__upNavContactsAddressTitle">Адрес</p>
+                                    <p class="footer__upNavContactsAddressDescript">г. Санкт Петербург,<br> Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
+                                    <p class="footer__upNavContactsAddressDescriptMobile">г. Санкт Петербург, Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
                                 </div>
                             </div>
-                            <div class="footer__upNavContactsMail">
-                                <p>E-mail</p>
-                                <div class="footer__upNavContactsMailBlock">
-                                    <a href="mailto:ptgmk2008@yahoo.com">ptgmk2008@yahoo.com</a>
-                                    <a href="mailto:ptgmk2008@gmail.com">ptgmk2008@gmail.com</a>
-                                </div>
-                            </div>
-                            <div class="footer__upNavContactsAddress">
-                                <p class="footer__upNavContactsAddressTitle">Адрес</p>
-                                <p class="footer__upNavContactsAddressDescript">г. Санкт Петербург,<br> Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
-                                <p class="footer__upNavContactsAddressDescriptMobile">г. Санкт Петербург, Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
-                            </div>
                         </div>
-                    </div>
-                </nav>
-            </div>
-            <div class="footer__soz">
-                <div class="footer__sozLine"></div>
-                <div class="footer__sozIcons">
-                    <a href="#"><img src="img/01.svg" alt="Vk"></a>
-                    <a href="#"><img src="img/02.svg" alt="WhatsApp"></a>
-                    <a href="#"><img src="img/03.svg" alt="Tg"></a>
+                    </nav>
                 </div>
-                <div class="footer__sozLine"></div>
-            </div>
-            <div class="footer__bottom">
-                <a href="#">Политика и конфиденциальность</a>
+                <div class="footer__soz">
+                    <div class="footer__sozLine"></div>
+                    <div class="footer__sozIcons">
+                        <a href="#"><img src="img/01.svg" alt="Vk"></a>
+                        <a href="#"><img src="img/02.svg" alt="WhatsApp"></a>
+                        <a href="#"><img src="img/03.svg" alt="Tg"></a>
+                    </div>
+                    <div class="footer__sozLine"></div>
+                </div>
+                <div class="footer__bottom">
+                    <a href="#">Политика и конфиденциальность</a>
+                </div>
             </div>
         </div>
     </footer>

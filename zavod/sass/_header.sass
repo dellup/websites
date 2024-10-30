@@ -58,6 +58,38 @@ header
                 margin-bottom: 5px
                 font-size: 16px
                 font-weight: 700
+    &__menu
+        &-item
+            &-submenu
+                font-size: 18px
+                font-style: normal
+                font-weight: 400
+                color: $white
+                &::after
+                    content: ""
+                    position: absolute
+                    background-image: url("../img/header-arrow.svg")
+                    background-repeat: no-repeat
+                    top: 7px
+                    width: 10px
+                    height: 8px
+                    right: 26px
+                    
+    
+                    
+    &__submenu
+        &-list
+            width: 100%
+            display: none
+            position: absolute
+            top: 20px
+            left: 0px
+            &-active
+                display: block
+                background: $green
+                transition: .3s
+        &-item
+            padding-top: 10px
     &__down
         background-color: #329A65
         .container
@@ -81,6 +113,7 @@ header
             &Item
                 flex: 1 1 0px
                 text-align: center
+                position: relative
                 a
                     padding: 18px 0px
                     color: $white
@@ -93,6 +126,10 @@ header
     .header
         &__menu
             max-width: 621px
+            &-item
+                &-submenu
+                    &::after
+                        right: 9px
             &List
                 max-width: 621px
         &__up
@@ -196,3 +233,10 @@ header
             display: none
         &__down
             display: none
+        &__menu
+            &-item
+                &-submenu
+                    position: relative
+                    &::after
+                        right: 0
+                        left: 55px

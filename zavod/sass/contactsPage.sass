@@ -4,7 +4,6 @@
 .up
     &__back
         display: flex
-        padding-top: 37px
         &Arrow
             width: 18px
             height: 10px
@@ -39,7 +38,9 @@
         background-color: #FFF
         padding-top: 50px
         &::before
-            display: none
+            @include big-triangle
+            bottom: -52px
+            
         iframe
             max-width: 632px
             width: 100%
@@ -71,6 +72,15 @@
                     font-size: 17px
                     font-weight: 500
                     line-height: 22px 
+section
+    margin-bottom: 200px
+footer
+    position: relative
+.footer
+    &__bg
+        position: relative
+        &::before
+            @include footer-triangle
 @media screen and (max-width: 1300px) 
     .container
         padding: 0px 20px
@@ -93,12 +103,18 @@
 
         
 @media screen and (max-width: 650px) 
+    section
+        margin-bottom: 50px
     .about
         &__block
             display: block
         &__right
             background-color: #fff
             margin-bottom: 20px
+            &::before
+                bottom: -1px
+                
+                
             &Img
                 bottom: 0
         &__info
@@ -129,4 +145,9 @@
     .contacts
         &__cardWorktime
             display: block
+    .footer
+        &__bg
+            &::before
+                border-top: 90px solid #FFF
+                border-left: 65px solid transparent
 

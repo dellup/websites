@@ -51,4 +51,6 @@ $('.header__upMobileActiveLogoKrest').click((e) => {
 })
 
 
-
+$('.header__menu-item-submenu').click((e) => {
+    $('.header__submenu-list').toggleClass('header__submenu-list-active')
+})

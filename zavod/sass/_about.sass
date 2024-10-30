@@ -2,9 +2,10 @@
     &__info
         display: flex
         flex-direction: column
-        gap: 30px
+        gap: 18px
         max-width: 751px
         width: 100%
+        padding-top: 37px
         &Title
             font-size: 35px
             font-weight: 700
@@ -16,6 +17,9 @@
                 font-size: 18px
                 font-weight: 400
                 line-height: 25px
+                span
+                    &:nth-child(1)  
+                        display: none
         &Link
             background-color: $yellow
             color: $white
@@ -24,7 +28,7 @@
             width: 100%
             padding: 26px 0px
             text-align: center
-            margin-top: 24px
+            margin-top: 15px
     &__block
         display: flex
         align-items: center
@@ -36,6 +40,7 @@
         background-color: #F5F5F5
         position: relative
         border-radius: 10px
+        margin-bottom: -50px
         &::before
             @include medium-triangle
         &Mobile
@@ -105,6 +110,13 @@
                 text-align: justify
                 font-size: 15px
                 line-height: normal
+                p
+                    span
+                        &:nth-child(1)
+                            display: inline
+                        &:nth-child(2)
+                            display: none
+                            
             &Link
                 max-width: none
                 font-size: 14px
@@ -114,6 +126,7 @@
             margin-bottom: 25px
             &Img
                 width: 100%
+                right: 15px
             &Title
                 font-size: 40px
                 font-weight: 800
