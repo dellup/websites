@@ -1284,6 +1284,9 @@ footer {
   section {
     margin-bottom: 50px;
   }
+  * {
+    scroll-margin: 140px;
+  }
 }
 .up__back {
   display: -webkit-box;
