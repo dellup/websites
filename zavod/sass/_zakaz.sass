@@ -13,11 +13,7 @@
 @media screen and (max-width: 900px)
     .zakaz
         &__block
-            &Item
-                &:nth-child(3)
-                    display: none
-                &:nth-child(4)
-                    display: none
+            flex-wrap: wrap
 
 @media screen and (max-width: 650px)
     .zakaz
@@ -30,6 +26,7 @@
             justify-content: space-between
             align-items: center
             &Item
+                padding-bottom: 10px
                 img
                     max-width: 154px !important
                     width: 100% !important

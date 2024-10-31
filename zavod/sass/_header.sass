@@ -61,7 +61,8 @@ header
     &__menu
         &-item
             &-submenu
-                font-size: 18px
+                position: relative
+                font-size: 16px
                 font-style: normal
                 font-weight: 400
                 color: $white
@@ -70,7 +71,7 @@ header
                     position: absolute
                     background-image: url("../img/header-arrow.svg")
                     background-repeat: no-repeat
-                    top: 7px
+                    top: 44%
                     width: 10px
                     height: 8px
                     right: 26px
@@ -84,12 +85,26 @@ header
             position: absolute
             top: 20px
             left: 0px
+            &::before
+                @include big-triangle
+                background: transparent
+                opacity: 0
+                pointer-events: none
             &-active
+                width: 260px
                 display: block
                 background: $green
                 transition: .3s
+                margin-top: 30px
+            &-block
+                display: flex
+                flex-direction: column
+                gap: 8px
+                padding-top: 18px
+                padding-bottom: 27px
+                padding-left: 17px
         &-item
-            padding-top: 10px
+            text-align: left
     &__down
         background-color: #329A65
         .container
@@ -111,14 +126,18 @@ header
             max-width: 942px
             width: 100%
             &Item
+                &:hover
+                    background-color: #000
+                    translation: 0.3s
+                padding: 18px 0px
                 flex: 1 1 0px
                 text-align: center
                 position: relative
                 a
-                    padding: 18px 0px
+                    max-width: 202px
                     color: $white
                     font-weight: 400
-                    font-size: 18px
+                    font-size: 16px
     &__burger
         display: none
 
@@ -135,6 +154,10 @@ header
         &__up
             &Title
                 max-width: 190px
+        &__submenu
+            &-list
+                &-active
+                    width: 212px
 
 @media screen and (max-width: 900px) 
     .header
@@ -143,7 +166,7 @@ header
             width: 28px
             height: 16px
         &__up
-            padding-top: 52px
+            
             &Logo
                 width: 133px
             &Title
@@ -194,7 +217,7 @@ header
                     z-index: 1
                     top: 0
                     background-color: $green
-                    padding-top: 60px
+                    padding-top: 15px
                     &Logo
                         width: 100%
                         padding-bottom: 18px
@@ -226,7 +249,6 @@ header
                             flex-direction: column
                             gap: 10px
                             li
-                                font-size: 15px
                                 color: $white
                                 font-weight: 400
         &__contacts
@@ -239,4 +261,13 @@ header
                     position: relative
                     &::after
                         right: 0
+                        top: 7px
                         left: 55px
+        &__submenu
+            &-list
+                position: static
+                &-active
+                    margin-top: 0
+                &-block
+                    padding-left: 0
+                    padding-bottom: 10px

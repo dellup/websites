@@ -1,7 +1,7 @@
 @import '../style'
 
 .main
-    height: calc(100vh - 157px)
+    height: calc(100vh - 154px)
     .container
         height: 100%
     
@@ -71,7 +71,7 @@
 @import '_news'
 .about
     &__right
-        margin-bottom: 0px
+        margin-bottom: 25px
     &__info
         padding-top: 0px
 @media screen and (max-width: 1300px) 
@@ -80,6 +80,16 @@
     .main
         .slick-dots
             left: 50%
+@media screen and (max-width: 900px)
+    .main
+        height: calc( 100vh - 79px )
+    .header
+        &__submenu
+            &-list
+                &-block
+                    display: flex
+                    flex-direction: column
+                    gap: 8px
 @media screen and (max-width: 650px) 
     .main
         &__info

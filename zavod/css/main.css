@@ -136,7 +136,8 @@ header {
   font-weight: 700;
 }
 .header__menu-item-submenu {
-  font-size: 18px;
+  position: relative;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
   color: #FFFFFF;
@@ -146,7 +147,7 @@ header {
   position: absolute;
   background-image: url("../img/header-arrow.svg");
   background-repeat: no-repeat;
-  top: 7px;
+  top: 44%;
   width: 10px;
   height: 8px;
   right: 26px;
@@ -158,14 +159,43 @@ header {
   top: 20px;
   left: 0px;
 }
+.header__submenu-list::before {
+  z-index: 1;
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: 0;
+  right: 0;
+  border-bottom: 63px solid #FFF;
+  border-left: 50px solid transparent;
+  background: transparent;
+  opacity: 0;
+  pointer-events: none;
+}
 .header__submenu-list-active {
+  width: 260px;
   display: block;
   background: #339966;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  margin-top: 30px;
+}
+.header__submenu-list-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 8px;
+  padding-top: 18px;
+  padding-bottom: 27px;
+  padding-left: 17px;
 }
 .header__submenu-item {
-  padding-top: 10px;
+  text-align: left;
 }
 .header__down {
   background-color: #329A65;
@@ -205,17 +235,22 @@ header {
   width: 100%;
 }
 .header__menuListItem {
+  padding: 18px 0px;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 0px;
           flex: 1 1 0px;
   text-align: center;
   position: relative;
 }
+.header__menuListItem:hover {
+  background-color: #000;
+  translation: 0.3s;
+}
 .header__menuListItem a {
-  padding: 18px 0px;
+  max-width: 202px;
   color: #FFFFFF;
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
 }
 .header__burger {
   display: none;
@@ -234,15 +269,15 @@ header {
   .header__upTitle {
     max-width: 190px;
   }
+  .header__submenu-list-active {
+    width: 212px;
+  }
 }
 @media screen and (max-width: 900px) {
   .header__burger {
     display: block;
     width: 28px;
     height: 16px;
-  }
-  .header__up {
-    padding-top: 52px;
   }
   .header__upLogo {
     width: 133px;
@@ -312,7 +347,7 @@ header {
     z-index: 1;
     top: 0;
     background-color: #339966;
-    padding-top: 60px;
+    padding-top: 15px;
   }
   .header__upMobileActiveLogo {
     width: 100%;
@@ -366,7 +401,6 @@ header {
     gap: 10px;
   }
   .header__upMobileActiveMenuList li {
-    font-size: 15px;
     color: #FFFFFF;
     font-weight: 400;
   }
@@ -381,7 +415,18 @@ header {
   }
   .header__menu-item-submenu::after {
     right: 0;
+    top: 7px;
     left: 55px;
+  }
+  .header__submenu-list {
+    position: static;
+  }
+  .header__submenu-list-active {
+    margin-top: 0;
+  }
+  .header__submenu-list-block {
+    padding-left: 0;
+    padding-bottom: 10px;
   }
 }
 .zakaz__bg {
@@ -405,11 +450,9 @@ header {
 }
 
 @media screen and (max-width: 900px) {
-  .zakaz__blockItem:nth-child(3) {
-    display: none;
-  }
-  .zakaz__blockItem:nth-child(4) {
-    display: none;
+  .zakaz__block {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
 }
 @media screen and (max-width: 650px) {
@@ -426,6 +469,9 @@ header {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .zakaz__blockItem {
+    padding-bottom: 10px;
   }
   .zakaz__blockItem img {
     max-width: 154px !important;
@@ -1289,7 +1335,7 @@ footer {
   }
 }
 .main {
-  height: calc(100vh - 157px);
+  height: calc(100vh - 154px);
 }
 .main .container {
   height: 100%;
@@ -1746,6 +1792,9 @@ footer {
         -ms-flex-align: center;
             align-items: center;
   }
+  .about__imgMob {
+    margin-top: 15px;
+  }
 }
 @media screen and (max-width: 650px) {
   .about__info {
@@ -1967,7 +2016,7 @@ footer {
   }
 }
 .about__right {
-  margin-bottom: 0px;
+  margin-bottom: 25px;
 }
 .about__info {
   padding-top: 0px;
@@ -1979,6 +2028,21 @@ footer {
   }
   .main .slick-dots {
     left: 50%;
+  }
+}
+@media screen and (max-width: 900px) {
+  .main {
+    height: calc(100vh - 79px);
+  }
+  .header__submenu-list-block {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 8px;
   }
 }
 @media screen and (max-width: 650px) {
