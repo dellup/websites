@@ -66,6 +66,7 @@ header
                 font-style: normal
                 font-weight: 400
                 color: $white
+                padding: 18px 0px
                 &::after
                     content: ""
                     position: absolute
@@ -95,7 +96,7 @@ header
                 display: block
                 background: $green
                 transition: .3s
-                margin-top: 30px
+                margin-top: 34px
             &-block
                 display: flex
                 flex-direction: column
@@ -105,6 +106,8 @@ header
                 padding-left: 17px
         &-item
             text-align: left
+            a
+                padding: 0 !important
     &__down
         background-color: #329A65
         .container
@@ -129,11 +132,11 @@ header
                 &:hover
                     background-color: #000
                     translation: 0.3s
-                padding: 18px 0px
                 flex: 1 1 0px
                 text-align: center
                 position: relative
                 a
+                    padding: 18px 0px
                     max-width: 202px
                     color: $white
                     font-weight: 400
@@ -258,6 +261,7 @@ header
         &__menu
             &-item
                 &-submenu
+                    padding: 0
                     position: relative
                     &::after
                         right: 0

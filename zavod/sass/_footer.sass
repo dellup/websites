@@ -1,6 +1,11 @@
 footer
     background-color: $green
 .footer
+    position: relative
+    &__bg
+        position: relative
+        &::before
+            @include footer-triangle
     &__up
         padding-top: 18px
         display: flex
@@ -155,6 +160,7 @@ footer
 @media screen and (max-width: 650px)
     .footer
         &__up
+            padding-top: 0
             &Nav
                 flex-direction: column
                 gap: 25px
