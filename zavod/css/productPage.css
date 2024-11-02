@@ -1557,9 +1557,6 @@ footer {
     font-size: 23px;
     margin-left: 0;
   }
-  .news .container {
-    padding-top: 20px;
-  }
 }
 .news__item {
   display: -webkit-box;

@@ -1,6 +1,5 @@
 @import '../style'
 
-
 .up
     &__back
         display: flex
@@ -71,6 +70,69 @@
                 font-weight: 800
                 line-height: 25px
                 text-transform: uppercase
+    &__krani
+        margin-bottom: 60px
+        display: flex
+        flex-direction: column
+        gap: 30px
+        &Block
+            display: flex
+            flex-direction: column
+            gap: 10px
+        &Title
+            color: #000
+            font-size: 25px
+            font-weight: 800
+            line-height: 25px
+            text-transform: uppercase
+        &Item
+            padding: 28px 0px 29px 28px
+            border-radius: 10px
+            background: #F6F6F6
+            &Title
+                color: #000
+                font-size: 18px
+                font-weight: 800
+                line-height: 25px
+                text-transform: uppercase
+            &Descript
+                max-width: 1097px
+                width: 100%
+                font-size: 18px
+                font-weight: 400
+                line-height: 25px
+    &__prof
+        display: flex 
+        flex-direction: column
+        gap: 30px
+        &Title
+            color: #000
+            font-size: 25px
+            font-weight: 800
+            line-height: 25px
+            text-transform: uppercase
+        &Block
+            display: flex
+            flex-wrap: wrap
+            gap: 15px
+        &Item
+            height: 80px
+            flex: 1 1 auto
+            padding-left: 28px
+            display: flex
+            align-items: center
+            justify-content: center
+            padding-right: 28px
+            border-radius: 10px
+            background: #F6F6F6    
+            &Title
+                color: #000
+                text-align: center
+                font-size: 16px
+                font-weight: 800
+                line-height: 25px
+                text-transform: uppercase
+
 @media screen and (max-width: 1300px) 
     .container
         padding: 0px 20px
@@ -130,4 +192,19 @@
     .up
         &__back
             display: none
-
+    .about
+        &__krani
+            &Title
+                font-size: 20px
+            &Item
+                padding-right: 28px
+                &Title
+                    font-size: 16px
+                &Descript
+                    font-size: 14px
+                    line-height: 20px
+                    text-align: justify
+        &__prof
+            &Item
+                
+                width: 100%
