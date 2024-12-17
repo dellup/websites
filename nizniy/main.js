@@ -17,8 +17,10 @@ function fixZoom() {
 }
 
 // Применяем коррекцию при загрузке страницы и изменении масштаба
-window.addEventListener("resize", fixZoom);
-window.addEventListener("load", fixZoom);
+if (window.screen.width > 1200) {
+    window.addEventListener("resize", fixZoom);
+    window.addEventListener("load", fixZoom);
+}
 // Получаем радио-кнопки и SVG элементы
 const radios = document.querySelectorAll('input[name="radio"]');
 const radiosTypes = document.querySelectorAll('input[name="radioType"]');
@@ -45,6 +47,7 @@ function updateSVG() {
     }, 250);
 
 }
+
 // Добавляем обработчики событий на изменение радио-кнопок
 radios.forEach(radio => {
     radio.addEventListener('change', updateSVG); // Передаем аргумент 1
