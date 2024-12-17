@@ -10,7 +10,7 @@
     <title>Document</title>
 </head>
 <body>
-    <header>
+     <header>
         <div class="container">
             <div class="header__up">
                 <a class="header__upLogo" href="#"><img src="img/Logo.svg" alt="Logo"></a>
@@ -87,6 +87,11 @@
                 </div>
             </div>
         </div>
+<?php if( have_rows('repeater_field_name') ): while ( have_rows('repeater_field_name') ) : the_row(); ?>
+
+        the_sub_field('sub_field_name');
+
+<?php endwhile;endif; ?>
         <div class="header__down">
             <div class="container">
                 <nav class="header__menu">
@@ -414,83 +419,81 @@
         </section>
     </main>
     <footer>
-        <div class="footer__bg">
-            <div class="container">
-                <div class="footer__up">
-                    <div class="footer__upInfo">
-                        <a href='#' class="footer__upInfoLogo">
-                            <img src="img/LogoFoot.svg" alt="LogoFoot">
-                            <h3 class="footer__upInfoTitle">Промышленные технологии горно-промышленного комплекса</h3>
-                        </a>
-                        <div class="footer__upInfoWorktime">
-                            <div class="footer__upInfoWorktimeBlock">
-                                <img src="img/watch.svg" alt="Watch">
-                                Время работы
-                            </div>
-                            ПН-ПТ с 9:00 до 17:00
+        <div class="container">
+            <div class="footer__up">
+                <div class="footer__upInfo">
+                    <a href='#' class="footer__upInfoLogo">
+                        <img src="img/LogoFoot.svg" alt="LogoFoot">
+                        <h3 class="footer__upInfoTitle">Промышленные технологии горно-промышленного комплекса</h3>
+                    </a>
+                    <div class="footer__upInfoWorktime">
+                        <div class="footer__upInfoWorktimeBlock">
+                            <img src="img/watch.svg" alt="Watch">
+                            Время работы
                         </div>
-                        <button class="footer__upInfoButton modal__open">Заказать звонок</button>
+                        ПН-ПТ с 9:00 до 17:00
                     </div>
-                    <nav class="footer__upNav">
-                        <div class="footer__upNavCompany">
-                            <h3 class="footer__upNavTitle">Компания</h3>
-                            <ul class="footer__upNavList">
-                                <li><a href="#">Услуги</a></li>
-                                <li><a href="about.html">О компании</a></li>
-                                <li><a href="product.html">Продукция</a></li>
-                                <li><a href="news.html">Новости</a></li>
-                                <li><a href="contacts.html">Контакты</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__upNavKatalog">
-                            <h3 class="footer__upNavTitle">Каталог оборудования</h3>
-                            <ul class="footer__upNavList">
-                                <li><a href="vacuum.html">Вакуумная фильтрация</a></li>
-                                <li><a href="#">Обогатительное оборудование</a></li>
-                                <li><a href="#">Грузоподъемные механизмы</a></li>
-                                <li><a href="#">Насосные оборудования</a></li>
-                                <li><a href="#">Полимеры полиуретаны</a></li>
-                                <li><a href="#">Металлоконструкция</a></li>
-                            </ul>
-                        </div>
-                        <div class="footer__upNavContacts">
-                            <h3 class="footer__upNavTitle">Контакты</h3>
-                            <div class="footer__upNavContactsBlock">
-                                <div class="footer__upNavContactsTel">
-                                    <p>Телефон</p>
-                                    <div class="footer__upNavContactsTelBlock">
-                                        <a href="tel:+78123277665">8 (812) 327-76-65</a>
-                                        <a href="tel:+78123270968">8 (812) 327-09-68</a>
-                                    </div>
-                                </div>
-                                <div class="footer__upNavContactsMail">
-                                    <p>E-mail</p>
-                                    <div class="footer__upNavContactsMailBlock">
-                                        <a href="mailto:ptgmk2008@yahoo.com">ptgmk2008@yahoo.com</a>
-                                        <a href="mailto:ptgmk2008@gmail.com">ptgmk2008@gmail.com</a>
-                                    </div>
-                                </div>
-                                <div class="footer__upNavContactsAddress">
-                                    <p class="footer__upNavContactsAddressTitle">Адрес</p>
-                                    <p class="footer__upNavContactsAddressDescript">г. Санкт Петербург,<br> Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
-                                    <p class="footer__upNavContactsAddressDescriptMobile">г. Санкт Петербург, Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
+                    <button class="footer__upInfoButton modal__open">Заказать звонок</button>
+                </div>
+                <nav class="footer__upNav">
+                    <div class="footer__upNavCompany">
+                        <h3 class="footer__upNavTitle">Компания</h3>
+                        <ul class="footer__upNavList">
+                            <li><a href="#">Услуги</a></li>
+                            <li><a href="about.html">О компании</a></li>
+                            <li><a href="product.html">Продукция</a></li>
+                            <li><a href="news.html">Новости</a></li>
+                            <li><a href="contacts.html">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__upNavKatalog">
+                        <h3 class="footer__upNavTitle">Каталог оборудования</h3>
+                        <ul class="footer__upNavList">
+                            <li><a href="vacuum.html">Вакуумная фильтрация</a></li>
+                            <li><a href="#">Обогатительное оборудование</a></li>
+                            <li><a href="#">Грузоподъемные механизмы</a></li>
+                            <li><a href="#">Насосные оборудования</a></li>
+                            <li><a href="#">Полимеры полиуретаны</a></li>
+                            <li><a href="#">Металлоконструкция</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__upNavContacts">
+                        <h3 class="footer__upNavTitle">Контакты</h3>
+                        <div class="footer__upNavContactsBlock">
+                            <div class="footer__upNavContactsTel">
+                                <p>Телефон</p>
+                                <div class="footer__upNavContactsTelBlock">
+                                    <a href="tel:+78123277665">8 (812) 327-76-65</a>
+                                    <a href="tel:+78123270968">8 (812) 327-09-68</a>
                                 </div>
                             </div>
+                            <div class="footer__upNavContactsMail">
+                                <p>E-mail</p>
+                                <div class="footer__upNavContactsMailBlock">
+                                    <a href="mailto:ptgmk2008@yahoo.com">ptgmk2008@yahoo.com</a>
+                                    <a href="mailto:ptgmk2008@gmail.com">ptgmk2008@gmail.com</a>
+                                </div>
+                            </div>
+                            <div class="footer__upNavContactsAddress">
+                                <p class="footer__upNavContactsAddressTitle">Адрес</p>
+                                <p class="footer__upNavContactsAddressDescript">г. Санкт Петербург,<br> Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
+                                <p class="footer__upNavContactsAddressDescriptMobile">г. Санкт Петербург, Богатырский пр., д. 18, корпус 3 лит А офис 223а</p>
+                            </div>
                         </div>
-                    </nav>
-                </div>
-                <div class="footer__soz">
-                    <div class="footer__sozLine"></div>
-                    <div class="footer__sozIcons">
-                        <a href="#"><img src="img/01.svg" alt="Vk"></a>
-                        <a href="#"><img src="img/02.svg" alt="WhatsApp"></a>
-                        <a href="#"><img src="img/03.svg" alt="Tg"></a>
                     </div>
-                    <div class="footer__sozLine"></div>
+                </nav>
+            </div>
+            <div class="footer__soz">
+                <div class="footer__sozLine"></div>
+                <div class="footer__sozIcons">
+                    <a href="#"><img src="img/01.svg" alt="Vk"></a>
+                    <a href="#"><img src="img/02.svg" alt="WhatsApp"></a>
+                    <a href="#"><img src="img/03.svg" alt="Tg"></a>
                 </div>
-                <div class="footer__bottom">
-                    <a href="#">Политика и конфиденциальность</a>
-                </div>
+                <div class="footer__sozLine"></div>
+            </div>
+            <div class="footer__bottom">
+                <a href="#">Политика и конфиденциальность</a>
             </div>
         </div>
     </footer>
