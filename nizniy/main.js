@@ -13,7 +13,9 @@ function fixZoom() {
     const scale = window.devicePixelRatio; // Получаем текущий масштаб
     document.body.style.transform = `scale(${1 / scale})`;
     document.body.style.transformOrigin = "top left";
-    document.body.style.width = `${100 * scale}vw`; // Корректируем ширину
+    document.body.style.width = `${(100 * scale)}vw`; // Корректируем ширину
+    document.body.style.height = `${100 * scale}vh`; // Корректируем высоту
+    document.documentElement.style.height = `${window.innerHeight / scale}px`; // Корректируем высоту документа
 }
 
 // Применяем коррекцию при загрузке страницы и изменении масштаба
@@ -21,6 +23,7 @@ if (window.screen.width > 1200) {
     window.addEventListener("resize", fixZoom);
     window.addEventListener("load", fixZoom);
 }
+
 // Получаем радио-кнопки и SVG элементы
 const radios = document.querySelectorAll('input[name="radio"]');
 const radiosTypes = document.querySelectorAll('input[name="radioType"]');
