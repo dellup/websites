@@ -93,21 +93,11 @@ function setRadioChecked(pageId) {
         radioId = "radio-2";
     } else if (pageId === "Page 3") {
         radioId = "radio-3";
-    } else if (pageId === "Page 4") {
-        radioId = "radio-4";
-    } else if (pageId === "Page 5") {
-        radioId = "radio-5";
-    } else if (pageId === "Page 6") {
-        radioId = "radio-6";
-    } else if (pageId === "Page 7") {
-        radioId = "radio-7";
     } else if (pageId === "Style 1") {
         radioId = "radio-11";
     } else if (pageId === "Style 2") {
         radioId = "radio-12";
-    }else if (pageId === "Style 3") {
-        radioId = "radio-13";
-    }
+    } 
     
 
     const radio = document.getElementById(radioId);
@@ -119,51 +109,22 @@ function setRadioChecked(pageId) {
 // Вызываем функцию при загрузке страницы
 updateSVG();
 
-const frstPage = ["mod-17", "mod-19/1"];
-const scndPage = ["mod-15", "mod-19/2", "mod-13", "mod-5", "mod-8/1",];
-const thrdPage = ["mod-2", "mod-3", "mod-4", "mod-6", "mod-7/1", "mod-7/2", "mod-8/2", "mod-9/2", "mod-10/2", "mod-11/2", "mod-12", "mod-18/1"];
-const frthPage = ["mod-21", "mod-10/1", "mod-9/1", "mod-8/0"];
-const fifthPage = ["mod-20", "mod-16"];
-const sxthPage = ["mod-14/2", "mod-14/1", "mod-18/2", "mod-11/1",];
-const svnthPage = ["mod-22"];
+const frstPage = ["mod-5", "mod-6"];
+const scndPage = ["mod-1", "mod-2", "mod-3", "mod-4", "mod-6"];
+
 let map = new Map([
-    ["mod-2", "m2-v"],
-    ["mod-3", "m3-v"],
-    ["mod-4", "m4-v"],
-    ["mod-5", "m5-v"],
-    ["mod-6", "m6-v"],
-    ["mod-7/1", "m7-1-v"],
-    ["mod-7/2", "m7-2-v"],
-    ["mod-8/0", "m8-0-v"],
-    ["mod-8/1", "m8-1-v"],
-    ["mod-8/2", "m8-2-v"],
-    ["mod-9/1", "m9-1-v"],
-    ["mod-9/2", "m9-2-v"],
-    ["mod-10/1", "m10-1-v"],
-    ["mod-10/2", "m10-2-v"],
-    ["mod-11/1", "m11-1-v"],
-    ["mod-11/2", "m11-2-v"],
-    ["mod-12", "m12-v"],
-    ["mod-13", "m13-v"],
-    ["mod-14/1", "m14-1-v"],
-    ["mod-14/2", "m14-2-v"],
-    ["mod-15", "m15-v"],
-    ["mod-16", "m16-v"],
-    ["mod-17", "m17-v"],
-    ["mod-18/1", "m18-1-v"],
-    ["mod-18/2", "m18-2-v"],
-    ["mod-19/1", "m19-1-v"],
-    ["mod-19/2", "m19-2-v"],
-    ["mod-20", "m20-v"],
-    ["mod-21", "m21-v"],
-    ["mod-22", "m22-v"]
+    ["mod-2", "m8-1-v"],
+    ["mod-3", "m13-v"],
+    ["mod-4", "m15-v"],
+    ["mod-5", "m16-v"],
+    ["mod-6", "m19-1-v"]
 ]);
 
 let activeRow = null;
 let mapEventListeners = new Map();
 if (type == 1) {
     processingFirstType();
-}
+} 
 
 function removeRowEventListeners() {
     document.querySelectorAll('tr').forEach(row => {
@@ -205,28 +166,11 @@ function rowClickListener(event) {
     } else if (scndPage.includes(rowId) && document.querySelector('input[name="radio"]:checked').value != 2) {
         setRadioChecked("Page 2");
         updateSVG();
-    } else if (thrdPage.includes(rowId) && document.querySelector('input[name="radio"]:checked').value != 3) {
-        setRadioChecked("Page 3");
-        updateSVG();
-    } else if (frthPage.includes(rowId) && document.querySelector('input[name="radio"]:checked').value != 4) {
-        setRadioChecked("Page 4");
-        updateSVG();
-    } else if (fifthPage.includes(rowId) && document.querySelector('input[name="radio"]:checked').value != 5) {
-        setRadioChecked("Page 5");
-        updateSVG();
-    } else if (sxthPage.includes(rowId) && document.querySelector('input[name="radio"]:checked').value != 6) {
-        setRadioChecked("Page 6");
-        updateSVG();
-    } else if (svnthPage.includes(rowId) && document.querySelector('input[name="radio"]:checked').value != 7) {
-        setRadioChecked("Page 7");
-        updateSVG();
-    }
+    } 
 }
 
 function processingFirstType() {
     setRadioChecked("Style 1");
-    console.log("123");
-    console.log("first");
     document.querySelectorAll('.modul_button').forEach(item => {
         item.classList.remove("hideSecond");
     });
