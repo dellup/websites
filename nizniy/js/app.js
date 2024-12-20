@@ -16,7 +16,7 @@ function setScaleFactor() {
 	// Определяем масштабирование на основе ширины экрана
 	const winScale = window.innerWidth < 1080 ? 1 : window.devicePixelRatio;
 
-	console.log(winScale)
+
 	// Устанавливаем --scale-factor в CSS
 	document.documentElement.style.setProperty('--scale-factor', winScale);
 

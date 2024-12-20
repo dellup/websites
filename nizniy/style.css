@@ -260,7 +260,11 @@ tr:hover {
 
 .hideAdd {
   opacity: 0;
-  animation: change-background 1.3s ease-in infinite;
+  animation: change-background 1.3s ease-in 2;
+}
+.hideAdd-2 {
+  opacity: 0;
+  animation: change-background-3 1.3s ease-in;
 }
 
 .hideSecond {
@@ -273,7 +277,7 @@ tr:hover {
   animation: change-background 2s linear infinite;
 }
 
-@keyframes change-background {
+@keyframes change-background{
   0% {
     opacity: 0;
   }
@@ -286,6 +290,20 @@ tr:hover {
     opacity: 0;
   }
 }
+@keyframes change-background-3{
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 
 @keyframes change-background-2 {
   0% {
@@ -330,7 +348,9 @@ tr:hover {
 .main__infoTypesRadioForm input[name="radioType"] {
   display: none;
 }
-
+tr th:first-child {
+  padding-left: 20px;
+}
 .main__infoTypesRadio {
   position: absolute;
   bottom: calc(65px / var(--scale-factor));

@@ -155,6 +155,7 @@ function rowClickListener(event) {
     } 
 }
 
+
 function processingFirstType() {
     setRadioChecked("Style 1");
     document.querySelectorAll('.modul_button').forEach(item => {
@@ -172,19 +173,41 @@ function processingFirstType() {
         if (element) {
             // Создаем обработчик для элемента
             const listener = function() {
-                if (activeRow && activeRow !== row) {
-                    activeRow.classList.remove("table__row-active");
-                }
-                row.classList.add("table__row-active");
-                activeRow = row;
+                let c = 0
                 const addId = map.get(rowId);
-
+    
                 const add = document.getElementById(addId);
-
-                document.querySelectorAll('.modul_button').forEach(item => {
-                    item.classList.remove("hideAdd");
-                });
-                add.classList.add("hideAdd");
+                if (c === 0) {
+                    console.log(c);
+                    if (activeRow && activeRow !== row) {
+                        activeRow.classList.remove("table__row-active");
+                    }
+                    row.classList.add("table__row-active");
+                    activeRow = row;
+                    
+    
+                    document.querySelectorAll('.modul_button').forEach(item => {
+                        item.classList.remove("hideAdd");
+                    });
+                    add.classList.add("hideAdd");
+                    c++;
+                }
+                
+                // Рекурсивно зацикливаем анимацию только для hideAdd-2
+                function animate() {
+                    
+                    console.log(c);
+                    setTimeout(() => {
+                        add.classList.add("hideAdd-2");
+                        setTimeout(() => {
+                            add.classList.remove("hideAdd-2");
+                            // Запускаем анимацию снова
+                            animate();
+                        }, 8000); // Пауза перед повтором анимации
+                    }, 4000); // Пауза перед началом анимации
+                }
+                // Запускаем анимацию первый раз
+                animate();
             };
 
             // Сохраняем обработчик в mapEventListeners
@@ -212,6 +235,8 @@ function processingThirdType() {
     document.querySelectorAll('.modul_button').forEach(item => {
         item.classList.remove("hideSecond");
         item.classList.remove("hideAdd");
+        item.classList.remove("hideAdd-2");
+        
     });
     document.querySelectorAll('tr').forEach(row => {
         row.classList.remove("table__row-active");
