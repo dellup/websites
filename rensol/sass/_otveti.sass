@@ -1,0 +1,96 @@
+.otveti
+    &__title
+        font-size: 30px
+        font-weight: 500
+        line-height: 37px
+        text-align: center
+        margin-bottom: 30px
+    &__block
+        display: flex
+        flex-direction: column
+        gap: 20px
+    &__item
+        display: flex
+        justify-content: space-between
+        width: 100%
+        &Info
+            flex-direction: column
+            gap: 10px
+            max-width: 770px
+            display: flex
+            
+
+            h3
+                font-size: 20px
+                font-weight: 500
+                line-height: 24px
+            p
+                font-size: 14px
+                font-weight: 400
+                line-height: 17px
+                overflow: hidden
+                opacity: 0
+                transition: 0.3s
+                max-height: 0px
+            &-active
+                p
+                    overflow: visible
+                    opacity: 1
+                    max-height: 5000px
+
+        &Button
+            background-color: #F0F0F0
+            color: #000
+            width: 40px
+            height: 40px
+            border-radius: 100%
+            display: flex
+            align-items: center
+            justify-content: center
+            transition: .3s
+            i
+                width: 13px
+                height: 13px
+                background-color: #000
+                mask-size: contain
+                display: block
+                transition: .3s
+                transform: rotate(180deg)
+            &-active
+                background-color: $orange
+                transition: .3s
+                i
+                    background-color: $white
+                    transition: .3s
+                    transform: rotate(0deg)
+@media screen and (max-width: 1100px)
+    .otveti
+        &__item
+            &Info
+                max-width: 570px
+
+@media screen and (max-width: 650px)
+    .otveti
+        &__title
+            font-size: 20px
+            font-weight: 500
+            line-height: 24px
+            max-width: 243px
+            width: 100%
+            text-align: left
+        &__item
+            &Info
+                max-width: 260px
+                h3
+                    font-size: 14px
+                    font-weight: 500
+                    line-height: 17px
+                p
+                    font-size: 13px
+                    font-weight: 400
+                    line-height: 16px
+
+
+            
+
+        

@@ -1,0 +1,80 @@
+.needs
+    &__title
+        font-size: 30px
+        font-weight: 500
+        line-height: 37px
+        margin-bottom: 25px
+    &__list
+        display: flex
+        justify-content: space-between
+        &Item
+            display: flex
+            gap: 15px
+
+            a
+                max-width: 220px
+                background-color: rgb(83, 83, 83)
+                border-radius: 75px
+                display: flex
+                gap: 5px
+                align-items: center
+                justify-content: center
+                font-size: 12px
+                color: $white
+                font-weight: 500
+                line-height: 15px
+                padding-top: 15px
+                padding-left: 34px
+                padding-bottom: 15px
+                padding-right: 33px
+                img
+                    width: 30px
+                    height: 30px
+            &Wrap
+                display: flex
+                gap: 15px
+        &Item:nth-last-child(1)
+            flex-direction: column
+            gap: 21px
+            align-items: center
+            
+    &__item
+        &Img
+            width: 37px
+            height: 37px
+        &Info
+            display: flex
+            flex-direction: column
+            gap: 5px
+            max-width: 269px
+            width: 100%
+            h3
+                font-size: 16px
+                font-weight: 500
+                line-height: 20px
+            p
+                font-size: 14px
+                font-weight: 400
+                line-height: 17px
+
+@media screen and (max-width: 650px)
+    .needs
+        &__title
+            font-size: 20px
+            font-weight: 500
+            line-height: 24px
+        &__list
+            flex-direction: column
+            gap: 25px
+            justify-content: center
+            align-items: flex-start
+            &Item
+                
+                a
+                    width: 90%
+                    max-width: none
+                    padding-left: 71px
+                    padding-right: 71px
+        &__item
+            &Info
+                    max-width: none

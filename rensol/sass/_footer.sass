@@ -1,0 +1,35 @@
+footer
+    background-color: $black
+.footer
+    &__block
+        display: flex
+        justify-content: space-between
+        width: 100%
+        p
+            
+            font-size: 10px
+            color: $white
+            font-weight: 400
+            line-height: 12px
+            padding: 20px 0px
+        a
+            display: flex
+            justify-content: space-between
+            font-size: 10px
+            color: $white
+            font-weight: 400
+            line-height: 12px
+            padding: 20px 0px
+@media screen and (max-width: 1100px)
+    .footer
+        &__block
+            flex-direction: column
+            gap: 20px
+            padding: 35px 0px
+            align-items: center
+            a
+                padding: 0
+
+            p
+                padding: 0
+        

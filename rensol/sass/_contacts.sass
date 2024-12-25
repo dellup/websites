@@ -1,0 +1,102 @@
+.contacts
+    &__block
+        display: flex
+        justify-content: space-between
+    &__left
+        display: flex
+        flex-direction: column
+        gap: 30px
+    &__info
+        display: flex
+        flex-direction: column
+        gap: 15px
+        &Title
+            font-size: 30px
+            font-weight: 500
+            line-height: 37px
+        &Locate
+            display: flex
+            flex-direction: column
+            gap: 10px
+            p
+                font-size: 16px
+                font-weight: 500
+                line-height: 20px
+        &Connect
+            display: flex
+            flex-direction: column
+            gap: 15px
+            a
+                font-size: 17px
+                font-weight: 500
+                line-height: 21px
+        &Tel
+            display: flex
+            flex-direction: column
+            gap: 2px
+            font-size: 13px
+            font-weight: 400
+            line-height: 16px
+            a
+                font-size: 17px
+                font-weight: 500
+                line-height: 21px
+    &__photos
+        display: flex
+        gap: 10px
+        &Item
+            max-width: 255px
+            width: 100%
+            img
+                border-radius: 20px
+
+
+            &Block
+                display: flex
+                flex-direction: column
+                gap: 5px
+            &Little
+                border-radius: 20px
+                max-width: 123px
+                width: 100%
+
+    &__map
+        iframe
+            max-width: 350px
+            width: 100%
+            border-radius: 10px
+@media screen and (max-width: 1100px) 
+    .contacts
+        &__block
+            flex-direction: column
+            align-items: center
+            gap: 25px
+        &__info
+            &Title
+                font-size: 25px
+                font-weight: 500
+                line-height: 30px
+            &Locate
+                p
+                    font-size: 16px
+                    font-weight: 500
+                    line-height: 20px
+            &Tel
+                font-size: 13px
+                font-weight: 400
+                line-height: 16px
+                a
+                    font-size: 17px
+                    font-weight: 500
+                    line-height: 21px
+@media screen and (max-width: 650px)
+    .contacts
+        &__block
+            align-items: flex-start
+        &__photos
+            &Item
+                width: auto
+        &__map
+            width: 100%
+            iframe
+                max-width: none

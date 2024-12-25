@@ -1,0 +1,79 @@
+@import '../style'
+body
+    background-repeat: no-repeat
+    background-position: 100%
+    background-size: cover
+.news
+    padding-top: 200px
+    h2
+        font-size: 30px
+        margin-bottom: 40px
+        font-weight: 500
+        line-height: 37px
+    &__block
+        display: flex
+        flex-wrap: wrap
+        gap: 30px
+    &__item
+        max-width: 540px
+        width: 100%
+        display: flex
+        flex-direction: column
+        gap: 22px
+        margin-bottom: 30px
+        &Bg
+            border-radius: 15px
+            height: 100%
+            background: linear-gradient(180.00deg, rgba(23, 23, 23, 0),rgb(23, 23, 23) 100%)
+        &Img
+            background-position: center center
+            background-repeat: no-repeat
+            background-size: cover
+            height: 385px
+            border-radius: 15px
+
+            
+        &Info
+            display: flex
+            gap: 10px
+            flex-direction: column
+            &Date
+                font-size: 14px
+                font-weight: 400
+                line-height: 17px
+            &Descript
+                font-size: 16px
+                max-width: 300px
+                width: 100%
+                font-weight: 500
+                line-height: 20px
+            a
+                display: flex
+                gap: 2px
+                font-size: 14px
+                color: $yellow
+                font-weight: 500
+                line-height: 17px
+                img
+                    width: 17px
+                    height: 17px
+
+@media screen and (max-width: 1100px)
+    .news
+        h2
+            text-align: center
+        &__block
+            justify-content: center
+@media screen and (max-width: 650px)
+    .news
+        padding-top: 120px
+        h2
+            font-size: 20px
+            margin-bottom: 30px
+            font-weight: 500
+            line-height: 24px
+        &__item
+            gap: 15px
+            margin-bottom: 0
+            &Img
+                height: 235px

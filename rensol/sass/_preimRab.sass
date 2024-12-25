@@ -1,0 +1,53 @@
+.preimRab
+    &Block
+        display: flex
+        gap: 120px
+        position: relative
+        h2
+            font-size: 30px
+            font-weight: 500
+            line-height: 37px
+            max-width: 360px
+            width: 100%
+            span
+                font-weight: 700
+    &List
+        display: flex
+        gap: 75px
+        flex-wrap: wrap
+        max-width: 649px
+        width: 100%
+        &Item
+            display: flex
+            gap: 20px
+            justify-content: center
+            &Img
+                width: 60px
+            p
+                max-width: 197px
+                width: 100%
+                font-size: 16px
+                font-weight: 500
+                line-height: 20px
+            &Img-last
+                width: 90px
+    &Bg
+        position: absolute
+        bottom: -90px
+        left: -18%
+        
+@media screen and (max-width: 1100px)
+    .preimRab
+        &Block
+            flex-direction: column
+            align-items: center
+            gap: 30px
+            h2
+                font-size: 20px
+        &List
+            gap: 20px
+            &Item
+                gap: 15px
+        &Bg
+            display: none 
+                

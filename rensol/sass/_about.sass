@@ -1,0 +1,126 @@
+.about
+    padding-top: 189px
+    &__bg
+        position: relative
+        border-radius: 15px
+        background: #FFF
+        display: flex
+        overflow: hidden
+    &__left
+        display: flex
+        flex-direction: column
+        gap: 55px
+        padding-top: 55px
+        padding-left: 65px
+        padding-bottom: 69px
+    &__info
+        display: flex
+        flex-direction: column
+        gap: 20px
+        h1
+            font-size: 30px
+            font-weight: 500
+            line-height: 37px
+            max-width: 550px
+            width: 100%
+        p
+            font-size: 20px
+            font-weight: 500
+            max-width: 461px
+            width: 100%
+            line-height: 24px
+    &__logos
+        display: flex
+        gap: 25px
+    &__logo:nth-child(1)
+        width: 87px
+    &__logo:nth-child(2)
+        width: 76px
+    &__right
+        &Man
+            position: absolute
+            bottom: -3px
+            z-index: 2
+            right: 11%
+        &Gener
+            position: absolute
+            top: 0
+            right: 0
+            z-index: 1
+        &FirstTree
+            position: absolute
+            left: -313px
+            z-index: 2
+            bottom: -389px
+            transform: rotateX(4deg)
+        &SecondTree
+            position: absolute
+            z-index: 3
+            bottom: -358px
+            right: -348px
+            transform: rotateX(4deg)
+
+@media screen and (max-width: 1100px)
+    .about
+        .container
+            padding: 0
+        &__left
+            padding-bottom: 40px
+        &__right
+            position: relative
+        &__bg
+            background-color: rgba(0,0,0,0)
+            flex-direction: column
+            align-items: center
+        &__right
+            &Man
+                position: static
+                max-width: 470px
+                width: 470px
+                margin-left: -8%     
+                img
+                    margin-bottom: -5px           
+            &Gener
+                position: absolute
+                max-width: 339px
+                width: 100%
+                bottm: 0
+                right: -116px
+                z-index: -1
+                top: -25px
+            &FirstTree
+                z-index: -2
+                left: -313px
+                bottom: -389px
+            &SecondTree
+                top: 252px
+                right: -387px
+@media screen and (max-width: 650px)
+    .about
+        padding-top: 100px
+        &__left
+            gap: 25px
+            padding-left: 0
+        &__info
+            gap: 15px
+            padding-left: 25px
+            h1
+                font-size: 18px
+                font-weight: 500
+                line-height: 22px
+                max-width: 330px
+            p
+                font-size: 16px
+                max-width: 331px
+                font-weight: 500
+                line-height: 20px
+        &__logos
+            padding-left: 25px
+        &__bg
+            align-items: flex-start
+        &__right
+            &Gener
+                right: -113px
+            &Man
+                right: 0
+                max-width: 700px

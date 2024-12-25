@@ -1,0 +1,150 @@
+.main
+    margin-bottom: 50px
+    .container
+        height: 100%
+        display: flex
+        position: relative
+        z-index: 2
+    &__bg
+        background-image: url('../img/картинка.jpg')
+        background-position: center center
+        background-repeat: no-repeat
+        background-size: cover
+        height: 100vh
+        z-index: -1
+        position: relative
+        &::before
+            content: ""
+            position: absolute
+            width: 721px
+            height: 723px
+            right: 60px
+            top: -79px
+            filter: blur(150px)
+            background: rgb(241, 241, 241)
+    &__elipse
+        z-index: 0
+        position: absolute
+        width: 703px
+        height: 868px
+        left: 32px
+        filter: blur(140px)
+        background: rgb(241, 241, 241)
+        top: -112px
+    &__rectangle
+        position: absolute
+        width: 1409px
+        height: 259px
+        left: 86px
+        bottom: -70px
+        filter: blur(74.5px)   
+        background: rgb(253, 254, 255)
+        &Down
+            position: absolute
+            width: 100%
+            height: 176px
+            left: 0
+            bottom: -100px
+            background: linear-gradient(0.00deg, rgb(253, 254, 255) 75%,rgba(253, 254, 255, 0) 100%)
+    &__arrow
+        width: 30px
+        height: 30px
+        position: absolute
+        bottom: 70px
+        left: 49%
+    position: relative
+    height: 100vh
+    overflow-x: hidden
+    overflow-y: hidden
+    &__info
+        display: flex
+        flex-direction: column
+        gap: 45px
+        justify-content: center
+        height: 100%
+        padding-bottom: 80px
+        h1
+            font-size: 42px
+            font-weight: 400
+            line-height: 51px
+            text-align: left
+            max-width: 508px
+            width: 100%
+        &Buttons
+            display: flex
+            gap: 19px
+            &Item
+                border-radius: 68px
+                display: flex
+                gap: 7px
+                max-width: 243px
+                width: 100%
+                padding: 18px 24px
+                p
+                    font-size: 11px
+                    font-weight: 500
+                    line-height: 13px
+                    text-align: center
+                    text-transform: uppercase
+                    color: $white
+                img
+                    width: 31px
+                    height: 31px
+            &Item:first-child
+                background: $yellow
+            &Item:last-child
+                background: $blue
+    &__right
+        padding-top: 200px
+        max-width: 747px
+
+        padding-left: 13px
+        margin-right: -190px
+        width: 100%
+        filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.3))
+
+@media screen and (max-width:1100px)
+    .main .container
+        flex-direction: column
+        align-items: center
+    .main
+        &__right
+            display: flex
+            padding-top: 0
+            margin-bottom: 10px
+            align-items: center
+            margin-right: 10px
+        &__info
+            align-items: center
+            justify-content: flex-start
+            padding-top: 130px
+            padding-bottom: 40px
+            height: auto
+            h1
+                text-align: center
+    .main__arrow 
+        display: none
+@media screen and (max-width: 650px)
+    
+    .main
+
+        .container
+            display: block
+        &__right
+            max-width: 466px
+            display: flex
+            align-items: center
+            
+        &__info
+            gap: 30px
+            height: auto
+            h1
+                font-size: 28px
+                font-weight: 400
+                line-height: 34px
+            &Buttons
+                flex-direction: column
+        &__bg::before
+            right: -30px
+        &__elipse
+            display: none
