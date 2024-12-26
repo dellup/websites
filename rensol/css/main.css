@@ -407,6 +407,9 @@ footer {
   max-width: 243px;
   width: 100%;
   padding: 18px 24px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .main__infoButtonsItem p {
   font-size: 11px;
