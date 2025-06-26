@@ -1,0 +1,82 @@
+.kater
+    .container
+        background-color: $blue
+        border-radius: 50px
+        padding: 0
+    &__up
+        margin-bottom: 75px
+        padding-top: 52px
+        display: flex
+        flex-direction: column
+        gap: 25px
+        h2
+            font-size: 88px
+            color: $white
+            font-weight: 900
+            line-height: 102px
+            text-align: center
+            text-transform: uppercase
+            max-width: 789px
+            margin: 0 auto
+            width: 100%
+        &Rating
+            display: flex
+            flex-direction: column
+            gap: 13px
+            align-items: center
+            &Stars
+                display: flex
+                gap: 18px
+                img
+                    max-width: 64px
+                    width: 100px
+            p
+                font-size: 24px
+                color: $white
+                text-align: center
+                font-weight: 800
+                text-transform: uppercase
+    &__advantages
+        display: flex
+        flex-wrap: wrap
+        gap: 14px
+        margin-bottom: 37px
+        &Item
+            flex: 1 1 auto
+            text-align: center
+            color: $white
+            font-size: 24px
+            font-weight: 800
+            border: 1px solid $white
+            border-radius: 50px  
+            padding: 5px 23px
+    &__slider
+        position: relative
+        display: flex
+        padding-left: 90px
+        width: 100%
+        margin-bottom: 50px
+        .slick-track
+            display: flex
+            gap: 18px
+        
+        .slick-list
+            border-radius: 10px
+        &Img
+            border-radius: 10px
+            max-width: 530px
+            width: 100%
+            img 
+                border-radius: 10px
+            &Big
+                max-width: 688px
+    &__descript
+        p
+            font-size: 24px
+            font-weight: 500
+            color: $white
+        max-width: 540px
+        width: 100%
+        padding-bottom: 85px
+.orange
+    border: 1px solid rgb(231, 108, 19)
