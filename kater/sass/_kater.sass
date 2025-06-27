@@ -80,3 +80,40 @@
         padding-bottom: 85px
 .orange
     border: 1px solid rgb(231, 108, 19)
+
+@media screen and (max-width: 1400px)
+    .kater
+        .container
+            max-width: calc( 100vw - 40px )
+
+@media screen and (max-width: 900px)
+    .kater
+        &__up
+            h2
+                font-size: 58px
+                line-height: 85px
+        &__slider
+            padding-left: 0
+
+@media screen and (max-width: 600px)
+    .kater
+        &__up
+            gap: 10px
+            margin-bottom: 50px
+            h2
+                font-size: 34px
+                line-height: 60px
+            &Rating
+                p
+                    font-size: 16px
+                &Stars
+                    img
+                        max-width: 36px
+        &__advantages
+            &Item
+                font-size: 16px
+        &__descript
+            padding-bottom: 55px
+            p
+                text-align: justify
+                font-size: 16px

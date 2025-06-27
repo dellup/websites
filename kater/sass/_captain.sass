@@ -39,3 +39,35 @@
         width: 100%
         img
             border-radius: 50px
+
+
+@media screen and (max-width: 1200px)
+    .captain
+        &__wrapper
+            flex-direction: column
+            gap: 25px
+        &__info
+            h2
+                max-width: 960px
+            &Descript
+                p
+                    max-width: 680px
+        .container
+            padding-left: 30px
+            padding-right: 30px
+
+@media screen and (max-width: 600px)
+    .captain
+        .container
+            padding-left: 20px
+            padding-right: 20px
+        &__info
+            gap: 40px
+            h2
+                font-size: 54px
+                line-height: 68px
+            &Descript
+                font-size: 22px
+                p
+                    text-align: justify
+                    font-size: 18px

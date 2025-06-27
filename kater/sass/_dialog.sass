@@ -64,3 +64,51 @@
                     font-weight: 800
                     line-height: 30px
                     width: 100%
+
+@media screen and (max-width: 1400px)
+    .dialog
+        .container
+            max-width: calc( 100vw - 40px )
+
+@media screen and (max-width: 900px)
+    .dialog
+        &__title
+            font-size: 52px
+            line-height: 80px
+        &__block
+            padding-bottom: 85px
+            &Item
+                &Up
+                    p
+                        font-size: 21px
+                        max-width: 475px
+                &Down
+                    p
+                        font-size: 18px
+                        max-width: 475px
+
+@media screen and (max-width: 600px)
+    .dialog
+        .container
+            .inner-container
+                padding: 0
+        &__title
+            font-size: 26px
+            line-height: 40px
+            padding-top: 35px
+            margin-bottom: 35px
+        &__block
+            padding-bottom: 60px
+            &Item
+                &Up
+                    padding-left: 20px
+                    p
+                        max-width: 255px
+                        font-size: 16px
+                        line-height: 30px
+                &Down
+                    padding-left: 20px
+                    p
+                        max-width: 255px
+                        font-size: 14px
+                        line-height: 30px

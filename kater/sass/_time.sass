@@ -53,3 +53,45 @@
         margin: 0 auto
         display: flex
         align-items: center
+
+
+@media screen and (max-width: 1400px)
+    .time
+        .container
+            max-width: calc( 100vw - 40px )
+
+@media screen and (max-width: 1200px)
+    .time
+        .inner-container
+            h2
+                font-size: 70px
+                max-width: 649px
+        &__cards
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            gap: 15px
+
+    
+@media screen and (max-width: 600px)
+    .time
+        .inner-container
+            padding: 0
+            padding-top: 40px
+            padding-bottom: 40px
+            gap: 40px
+            h2
+                font-size: 48px
+                line-height: normal
+                font-size: 30px
+        &__cards
+            &Item
+                gap: 20px
+                h3
+                    font-size: 18px
+                p
+                    font-size: 14px
+                &Img
+                    height: auto
+        &__descript
+            font-size: 20px

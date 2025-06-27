@@ -74,3 +74,41 @@
             p
                 color: $white
 
+@media screen and (max-width: 1200px)
+    .main
+        h1
+            font-size: 100px
+
+@media screen and (max-width: 900px)
+    .main
+        h1
+            font-size: 64px
+            line-height: 100px
+        &__down
+            align-items: flex-start
+            flex-direction: column
+            &Price
+                p
+                    padding-left: 0
+            &Button
+                margin-bottom: 20px
+
+@media screen and (max-width: 600px)
+    .main
+        .inner-container
+            gap: 100px
+        h1
+            font-size: 42px
+            line-height: 80px
+        &__down
+            &Price
+                p
+                    font-size: 36px
+            &Descript
+                p
+                    font-size: 18px
+                    max-width: 265px
+                    width: 100%
+            &Button
+                font-size: 21px
+                max-width: 290px
